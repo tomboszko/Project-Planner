@@ -1,6 +1,4 @@
-﻿import {tasks} from "./task.js";
-
-function GenerateTaskHtml(task){
+﻿function GenerateTaskHtml(task){
     let taskCard = document.createElement("div");
     taskCard.classList.add("card","task");
     taskCard.setAttribute("id",task.id);

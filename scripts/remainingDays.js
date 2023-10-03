@@ -1,7 +1,6 @@
 ﻿import {tasks} from "./task.js";
 
-refreshRemainingDays();
-function refreshRemainingDays(){
+function RefreshRemainingDays(){
     let tasksElements = document.querySelectorAll(".task");
 
     for(let element of tasksElements){
@@ -35,4 +34,4 @@ function DisplayRemainingDays(taskId,time){
     
 }
 
-export {ComputeRemainingDays};
+export {ComputeRemainingDays, RefreshRemainingDays};
