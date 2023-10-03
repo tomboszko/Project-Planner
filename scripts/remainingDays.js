@@ -29,8 +29,8 @@ function DisplayRemainingDays(taskId,time){
     let currentElement = document.getElementById(taskId);
     if(currentElement !== null && currentElement !== undefined){
         
-        let remainingDaysElement = currentElement.querySelector(".dueDate__Text");
-        remainingDaysElement.innerText = `due in ${time} days`;        
+        let remainingDaysElement = currentElement.querySelector(".remainingTime___Text");
+        remainingDaysElement.innerText = `${time} remaining days`;        
     }
     
 }
