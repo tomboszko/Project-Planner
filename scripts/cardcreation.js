@@ -14,13 +14,11 @@ function addItemToDo() {
  
     document.getElementById('addToDo').addEventListener('click', function () {
 
-    let title = document.getElementById('titleCard1').value;
-    let status = document.getElementById('status__Card1').value;
-    let dueDate = document.ggetElementById('remainingTime__Card1').value;
-    let description = document.getElementById('descriptionCard1').value;
+        document
+        
+
 
     
-
  
 });
 
