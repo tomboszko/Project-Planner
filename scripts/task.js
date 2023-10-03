@@ -12,4 +12,8 @@ class task {
 }
 let tasks = [];
 
+tasks.push(
+    new task("title1","todo",new Date(2023,10,3),"blablabla",1)
+)
+
 export {tasks};
