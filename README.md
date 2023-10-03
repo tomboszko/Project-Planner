@@ -28,6 +28,10 @@ we made a simple directory in Sass to prevent merge conflicts.
 
 globally, it's quite cool to don't have struggles with design at the beginning.
 
-The girls are very good (and fast) at Javascript, I'm quite disapointed of my lack of skills.
+The girls are very good and fast with javascript. what a team !!!
+
+Nor real issues, just some struggles with some 'bouts de codes' as usual.
+
+To be continued...
 
 
