@@ -19,7 +19,13 @@ function GetCard(id){
 
 function ComputeRemainingDays(dueDate){
 
-    return Math.floor(Math.abs(dueDate-Date.now()) / (1000 * 60 * 60 * 24));
+    if(dueDate.getTime()>Date.now()){
+        return Math.ceil(Math.abs(dueDate-Date.now()) / (1000 * 60 * 60 * 24));
+    }
+    
+    else{
+        return 0;
+    }    
   
 }
 
