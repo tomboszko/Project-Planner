@@ -16,10 +16,10 @@ function compareName( a, b )
 // compare days for tasks sorting by remaining days
 function compareDays( a, b ) 
 {
-    if ( a.days < b.days ){
+    if ( a.remainingDays < b.remainingDays ){
       return -1;
     }
-    if ( a.days > b.days ){
+    if ( a.remainingDays > b.remainingDays ){
       return 1;
     }
     return 0;

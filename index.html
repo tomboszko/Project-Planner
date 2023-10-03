@@ -7,6 +7,7 @@
             crossorigin="anonymous"></script>
     <script defer src="./scripts/sorting.js"></script>
     <script type="module" defer src="./main.js"></script>
+    <script defer src="./scripts/filtering.js"></script>
     <title>The Project Planner</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
           crossorigin="anonymous">
@@ -19,15 +20,19 @@
 </header>
 <main>
     <select id="sortSelect" class="form-select" aria-label="Default select example">
-        <option selected>Sorting</option>
-        <option value="1">RemainingDate</option>
+        <option selected>Default</option>
+        <option value="1">Remaining Days</option>
         <option value="2">Name</option>
     </select>
 
     <select id="filterSelect" class="form-select" aria-label="Default select example">
-        <option selected>Filter</option>
-        <option value="1">...</option>
-        <option value="2">...</option>
+        <option selected>All Tasks</option>
+        <option value="1">To Do Only</option>
+        <option value="2">In Progress Only</option>
+        <option value="3">Done Only</option>
+        <option value="4">Late Tasks Only</option>
+        <option value="5">Urgent Tasks Only</option>
+        <option value="6">Not Urgent Tasks Only</option>
     </select>
 
 
