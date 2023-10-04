@@ -27,27 +27,17 @@ function compareDays( a, b )
 }
 
 // called when sorting selection changed and create new arrays for each collumns
-function changeSorting(arrToDo, arrProgress, arrDone, setArray = true)
+function changeSorting()
 {
     let arr1 = [];
     let arr2 = [];
     let arr3 = [];
 
-    if (setArray)
-    {
-        tasks.forEach(element => {
-            if (element.status == "todo") arr1.push(element);
-            if (element.status == "inprogress") arr2.push(element);
-            if (element.status == "done") arr3.push(element);
-        });
-    }
-
-    else
-    {
-        arr1 = arrToDo;
-        arr2 = arrProgress;
-        arr3 = arrDone;
-    }
+    tasks.forEach(element => {
+        if (element.status == "todo") arr1.push(element);
+        if (element.status == "inprogress") arr2.push(element);
+        if (element.status == "done") arr3.push(element);
+    });
 
     switch (sortingInput.value) {
         case "Default":
@@ -74,9 +64,9 @@ function changeSorting(arrToDo, arrProgress, arrDone, setArray = true)
 // called to sort html elements
 function sortTasks(arr, status)
 {
-    if (document.getElementById(status).querySelectorAll(".card").length > 0)
+    for (let i = 0; i < arr.length; i++) 
     {
-        for (let i = 0; i < arr.length; i++) 
+        if (document.getElementById(arr[i].id) != null)
         {
             document.getElementById(status).append(document.getElementById(arr[i].id));
         }

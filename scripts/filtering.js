@@ -76,7 +76,7 @@ function changeFiltering()
         sortTasks(arr3, "doneProgress");
     }
 
-    changeSorting(arr1, arr2, arr3, false);
+    changeSorting();
 }
 
 // called to sort html elements
