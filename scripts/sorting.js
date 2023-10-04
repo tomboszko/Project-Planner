@@ -32,9 +32,9 @@ function changeSorting()
     let arr3 = [];
 
     tasks.forEach(element => {
-        if (element.status == "toDo") arr1.push(element);
-        if (element.status == "inProgress") arr2.push(element);
-        if (element.status == "done") arr3.push(element);
+        if (element.status == "To Do") arr1.push(element);
+        if (element.status == "In progress") arr2.push(element);
+        if (element.status == "Done") arr3.push(element);
     });
 
     switch (sortingInput.value) {
