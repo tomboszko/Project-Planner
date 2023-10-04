@@ -15,16 +15,32 @@ let id =0;
 //     return new task(title, status, dueDate, description, id);
 // }
 
+function preselectStatus(StatusId) {
+    
+    let form = document.getElementById('cardInput');
+document.getElementById(StatusId).checked = true;
+form.classList.toggle("d-none");
+
+}
 
 let addItemToDo = document.getElementById('addToDo');  
 addItemToDo.addEventListener('click',function(){
-
-let form = document.getElementById('cardInput');
-form.classList.toggle("d-none");
-
-// "pre remplir" input radio status
+preselectStatus('InputToDo');
 
     });
+
+    let addItemprogress = document.getElementById('addInProgress');  
+addItemprogress.addEventListener('click',function(){
+preselectStatus('InputInProgress');
+
+    });
+
+    let addItemDone = document.getElementById('addDone');  
+addItemDone.addEventListener('click',function(){
+preselectStatus('InputDone');
+
+    });
+
 
 function addTaskForm() {
 
