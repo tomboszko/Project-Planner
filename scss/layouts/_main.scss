@@ -1,10 +1,10 @@
 
 main {
-    background-color: #AED2F9;;
+    background-color: $barbielightblue;
 }
 
 .column {
-background-color: #F6CADD;
+background-color: $barbielightpink;
 
 margin: {
     right: 1rem;
@@ -12,7 +12,6 @@ margin: {
     bottom: 1rem;
 }
 border-radius: 1rem;
-padding: auto;
 list-style: none;
 
 }
