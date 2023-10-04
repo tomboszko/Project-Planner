@@ -3,6 +3,7 @@ import {changeSorting} from "./scripts/sorting.js";
 import {changeFiltering} from "./scripts/filtering.js";
 import {tasks,task} from "./scripts/task.js";
 import{AddTaskToColumn} from "./scripts/generateTaskHtml.js";
+import {addTaskForm,preselectStatus} from "./scripts/cardcreation.js";
 
 RefreshRemainingDays();
 
@@ -13,6 +14,26 @@ let filteringInput = document.getElementById("filterSelect");
 filteringInput.addEventListener("change", changeFiltering);
 
 
+let addItemToDo = document.getElementById('addToDo');
+addItemToDo.addEventListener('click', function () {
+    preselectStatus('InputToDo');
+
+});
+
+let addItemInProgress = document.getElementById('addInProgress');
+addItemInProgress.addEventListener('click', function () {
+    preselectStatus('InputInProgress');
+
+});
+
+let addItemDone = document.getElementById('addDone');
+addItemDone.addEventListener('click', function () {
+    preselectStatus('InputDone');
+
+});
+
+let submit = document.getElementById('addTask');
+submit.addEventListener('click', addTaskForm);
 
 
 

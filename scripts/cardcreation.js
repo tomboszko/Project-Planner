@@ -1,7 +1,7 @@
 import {tasks, task} from "./task.js";
 import {AddTaskToColumn} from "./generateTaskHtml.js";
 
-let id =0;
+let id = 0;
 
 
 // function createTask(cardElement) {
@@ -16,42 +16,22 @@ let id =0;
 // }
 
 function preselectStatus(StatusId) {
-    
+
     let form = document.getElementById('cardInput');
-document.getElementById(StatusId).checked = true;
-form.classList.toggle("d-none");
+    document.getElementById(StatusId).checked = true;
+    form.classList.toggle("d-none");
 
 }
-
-let addItemToDo = document.getElementById('addToDo');  
-addItemToDo.addEventListener('click',function(){
-preselectStatus('InputToDo');
-
-    });
-
-    let addItemprogress = document.getElementById('addInProgress');  
-addItemprogress.addEventListener('click',function(){
-preselectStatus('InputInProgress');
-
-    });
-
-    let addItemDone = document.getElementById('addDone');  
-addItemDone.addEventListener('click',function(){
-preselectStatus('InputDone');
-
-    });
-
-
 function addTaskForm() {
 
 
     let titleInput = document.getElementById('card-titleInput');
     let dueDateInput = document.getElementById('dueDate__Card1Input');
     let descriptionInput = document.getElementById('descriptionCard1Input');
-    
+
 
     let title = titleInput.value;
-    let dueDate = new Date(dueDateInput.value); 
+    let dueDate = new Date(dueDateInput.value);
     let description = descriptionInput.value;
     let status = displayRadioValue();
 
@@ -67,13 +47,8 @@ function addTaskForm() {
     descriptionInput.value = '';
 
     let form = document.getElementById('cardInput');
-form.classList.toggle("d-none");
+    form.classList.toggle("d-none");
 }
-
-let submit = document.getElementById('addTask');
-submit.addEventListener('click', addTaskForm);
-
-
 
 function displayRadioValue() {
 
@@ -81,10 +56,10 @@ function displayRadioValue() {
 
     for (let i = 0; i < element.length; i++) {
         if (element[i].checked) {
-         return element[i].value;
+            return element[i].value;
         }
     }
-    
+
 }
 
-
+export {preselectStatus,addTaskForm}
