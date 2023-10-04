@@ -10,7 +10,6 @@ let doneColDisplay = document.getElementById("doneProgress");
 // called when filter selection changed and create new arrays for each collumns if nescessary
 function changeFiltering()
 {
-
     let arr1 = [];
     let arr2 = [];
     let arr3 = [];
@@ -24,28 +23,28 @@ function changeFiltering()
 
     switch (filteringInput.value) {
         case "All Tasks":
-            toDoColDisplay.style.visibility = "visible";
-            inProgressColDisplay.style.visibility = "visible";
-            doneColDisplay.style.visibility = "visible";
+            toDoColDisplay.style.display = "";
+            inProgressColDisplay.style.display = "";
+            doneColDisplay.style.display = "";
             reOrder = true;
             break;
 
         case "1":
-            toDoColDisplay.style.visibility = "visible";
-            inProgressColDisplay.style.visibility = "hidden";
-            doneColDisplay.style.visibility = "hidden";
+            toDoColDisplay.style.display = "";
+            inProgressColDisplay.style.display = "none";
+            doneColDisplay.style.display = "none";
             break;
 
         case "2":
-            toDoColDisplay.style.visibility = "hidden";
-            inProgressColDisplay.style.visibility = "visible";
-            doneColDisplay.style.visibility = "hidden";
+            toDoColDisplay.style.display = "none";
+            inProgressColDisplay.style.display = "";
+            doneColDisplay.style.display = "none";
             break;
 
         case "3":
-            toDoColDisplay.style.visibility = "hidden";
-            inProgressColDisplay.style.visibility = "hidden";
-            doneColDisplay.style.visibility = "visible";
+            toDoColDisplay.style.display = "none";
+            inProgressColDisplay.style.display = "none";
+            doneColDisplay.style.display = "";
             break;
 
         case "4":

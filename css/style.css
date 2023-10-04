@@ -24,6 +24,7 @@
 .badge {
   color: white;
   background-color: rgb(201, 182, 215);
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -79,6 +80,7 @@
   border: solid rgba(146, 199, 255, 0.4509803922) 0.5px;
   font-weight: 500;
   border-radius: 50px;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -141,6 +143,7 @@ footer {
   overflow-y: scroll;
 }
 #cardInput .addTask {
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -161,6 +164,4 @@ main {
   border-radius: 1em;
   font-size: 1rem;
   font-weight: 600;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

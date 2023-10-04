@@ -1,9 +1,9 @@
 import {RefreshRemainingDays} from "./scripts/remainingDays.js";
-import {changeSorting} from "./scripts/sorting.js";
-import {changeFiltering} from "./scripts/filtering.js";
 import {tasks,task} from "./scripts/task.js";
 import{AddTaskToColumn} from "./scripts/generateTaskHtml.js";
 import {addTaskForm,preselectStatus} from "./scripts/cardcreation.js";
+import {changeSorting} from "./scripts/sorting.js";
+import {changeFiltering} from "./scripts/filtering.js";
 
 RefreshRemainingDays();
 
@@ -41,7 +41,7 @@ tasks.push(
     new task("title1","todo",new Date(2025,1,25),"blablabla",1),
     // new task("title2","inprogress",new Date(2023,11,30),"blablabla",2),
     // new task("title3","done",new Date(2024,1,25),"blablabla",3),
-    // new task("title4","to do",new Date(2023,11,24),"blablabla",4),
+    // new task("title4","todo",new Date(2023,11,24),"blablabla",4),
     )
 
 
