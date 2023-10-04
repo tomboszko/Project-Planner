@@ -1,3 +1,36 @@
+<<<<<<< HEAD
 
 
 /*# sourceMappingURL=style.css.map */
+=======
+header {
+  background-color: #C9B6D7;
+  color: white;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 1rem;
+}
+
+main {
+  background-color: #AED2F9;
+}
+
+.col {
+  background-color: #F6CADD;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  padding: auto;
+}
+
+footer {
+  background-color: #C9B6D7;
+  height: 3rem;
+  color: antiquewhite;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
+>>>>>>> design

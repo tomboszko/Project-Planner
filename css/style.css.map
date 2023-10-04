@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"style.css"}
+=======
+{"version":3,"sources":["../scss/layouts/_header.scss","style.css","../scss/layouts/_main.scss","../scss/layouts/_footer.scss"],"names":[],"mappings":"AACA;EACA,yBAAA;EACA,YAAA;EACA,aAAA;EACA,kBAAA;EACA,sBAAA;EAEI,kBAAA;EACA,iBAAA;EAEJ,kBAAA;ACFA;;ACRA;EACI,yBAAA;ADWJ;;ACRA;EACA,yBAAA;EAGI,kBAAA;EACA,gBAAA;EACA,mBAAA;EAEJ,mBAAA;EACA,aAAA;ADQA;;AErBA;EAEI,yBAAA;EACA,YAAA;EACA,mBAAA;EACA,kBAAA;AFuBJ","file":"style.css"}
+>>>>>>> design
