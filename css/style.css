@@ -1,15 +1,24 @@
 header {
-  background-color: rgb(22, 223, 223);
-}
-
-header {
-  background-color: rgb(30, 36, 36);
-  color: antiquewhite;
+  background-color: #C9B6D7;
+  color: white;
   display: flex;
   align-items: start;
   flex-direction: column;
   margin-right: auto;
   margin-left: auto;
+  padding-left: 1rem;
+}
+
+main {
+  background-color: #AED2F9;
+}
+
+.col {
+  background-color: #F6CADD;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  padding: auto;
 }
 
 @font-face {
