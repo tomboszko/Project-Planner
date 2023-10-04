@@ -41,9 +41,9 @@ function FulFillTaskHtml(taskCard,task){
 
 function AddTaskToColumn(task){
     
-    let statusValue = (task.status).trim().split(" ").join("").toLowerCase();
+    task.status = (task.status).trim().split(" ").join("").toLowerCase();
     
-    let col = document.querySelector(`.column[status=${CSS.escape(statusValue)}]`);
+    let col = document.querySelector(`.column[status=${CSS.escape(task.status)}]`);
     let taskElement = GenerateTaskHtml(task);
     
     if(col !== null && col !== undefined){        
