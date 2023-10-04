@@ -96,3 +96,5 @@ function findCorrectTiming(arr, min, max)
 
     return newArr;
 }
+
+export {changeFiltering};
