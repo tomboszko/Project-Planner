@@ -1,6 +1,6 @@
 import {tasks} from "./task.js";
 import {AddTaskToColumn} from "./generateTaskHtml.js";
-import {changeSorting, tasksDisplayed} from "./sorting.js";
+import {changeSorting} from "./sorting.js";
 
 let filteringInput = document.getElementById("filterSelect");
 let toDoColDisplay = document.getElementById("toDoCol");
@@ -75,19 +75,8 @@ function changeFiltering()
         sortTasks(arr2, "inProgressCol");
         sortTasks(arr3, "doneProgress");
     }
-    tasksDisplayed.length = 0;
 
-    arr1.forEach(element => {
-        tasksDisplayed.push(element);
-    });
-    arr2.forEach(element => {
-        tasksDisplayed.push(element);
-    });
-    arr3.forEach(element => {
-        tasksDisplayed.push(element);
-    });
-
-    changeSorting();
+    changeSorting(arr1, arr2, arr3, false);
 }
 
 // called to sort html elements

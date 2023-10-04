@@ -1,10 +1,6 @@
 import {task, tasks} from "./task.js";
 
 let sortingInput = document.getElementById("sortSelect");
-let tasksDisplayed = [];
-setTimeout(() => {
-    tasksDisplayed = Array.from(tasks);
-}, 10);
 
 // compare titles for tasks sorting by name
 function compareName( a, b ) 
@@ -31,17 +27,27 @@ function compareDays( a, b )
 }
 
 // called when sorting selection changed and create new arrays for each collumns
-function changeSorting()
+function changeSorting(arrToDo, arrProgress, arrDone, setArray = true)
 {
     let arr1 = [];
     let arr2 = [];
     let arr3 = [];
 
-    tasksDisplayed.forEach(element => {
-        if (element.status == "todo") arr1.push(element);
-        if (element.status == "inprogress") arr2.push(element);
-        if (element.status == "done") arr3.push(element);
-    });
+    if (setArray)
+    {
+        tasks.forEach(element => {
+            if (element.status == "todo") arr1.push(element);
+            if (element.status == "inprogress") arr2.push(element);
+            if (element.status == "done") arr3.push(element);
+        });
+    }
+
+    else
+    {
+        arr1 = arrToDo;
+        arr2 = arrProgress;
+        arr3 = arrDone;
+    }
 
     switch (sortingInput.value) {
         case "Default":
@@ -78,4 +84,3 @@ function sortTasks(arr, status)
 }
 
 export {changeSorting};
-export {tasksDisplayed};
