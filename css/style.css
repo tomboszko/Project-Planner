@@ -17,11 +17,14 @@ main {
   background-color: #F6CADD;
   margin-right: 1rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   border-radius: 1rem;
   padding: auto;
 }
 
-@font-face {
-  font-family: "poppins";
-  src: url("./scss/abstracts/Poppins-Regular.ttf");
+footer {
+  background-color: #C9B6D7;
+  height: 3rem;
+  color: antiquewhite;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
