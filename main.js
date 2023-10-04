@@ -39,9 +39,9 @@ submit.addEventListener('click', addTaskForm);
 
 tasks.push(
     new task("title1","todo",new Date(2025,1,25),"blablabla",1),
-    new task("title2","inprogress",new Date(2023,11,30),"blablabla",2),
-    new task("title3","done",new Date(2024,1,25),"blablabla",3),
-    new task("title4","to do",new Date(2023,11,24),"blablabla",4),
+    // new task("title2","inprogress",new Date(2023,11,30),"blablabla",2),
+    // new task("title3","done",new Date(2024,1,25),"blablabla",3),
+    // new task("title4","to do",new Date(2023,11,24),"blablabla",4),
     )
 
 
