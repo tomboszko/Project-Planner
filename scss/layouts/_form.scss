@@ -1,0 +1,31 @@
+#cardInput
+{
+    position: fixed;
+    z-index: 1;
+    top: 10%;
+    left: 10%;
+    width: 80vw;
+    height: 80vh;
+
+    background-color: #c5e0fbfa;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    overflow-y: scroll;
+
+    .addTask
+    {
+        width: fit-content;
+    }
+}
+
+#cardInput::-webkit-scrollbar 
+{
+    display: none;
+}
