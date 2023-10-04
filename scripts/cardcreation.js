@@ -1,14 +1,14 @@
-
-function createTask(cardElement) {
-
-    let title = cardElement.querySelector('.card-title').textContent;
-    let status = cardElement.querySelector('.badge').textContent;
-    let dueDate = cardElement.querySelector('.dueDate__Text').textContent;
-    let description = cardElement.querySelector('.card-text').textContent;
-    let id = cardElement.id;
-
-    return new task(title, status, dueDate, description, id);
-}
+import {tasks, task} from "./task.js";
+// function createTask(cardElement) {
+//
+//     let title = cardElement.querySelector('.card-title').textContent;
+//     let status = cardElement.querySelector('.badge').textContent;
+//     let dueDate = cardElement.querySelector('.dueDate__Text').textContent;
+//     let description = cardElement.querySelector('.card-text').textContent;
+//     let id = cardElement.id;
+//
+//     return new task(title, status, dueDate, description, id);
+// }
 
 
 let addItemToDo = document.getElementById('addToDo');  
@@ -48,15 +48,13 @@ submit.addEventListener('click', addTaskForm);
 
 function displayRadioValue() {
 
-    var element = document.getElementsByName('status');
+    let element = document.getElementsByName('status');
 
-    for (i = 0; i < element.length; i++) {
+    for (let i = 0; i < element.length; i++) {
         if (element[i].checked) {
          return element[i].value;
         }
-
     }
-    return;
     
 }
 

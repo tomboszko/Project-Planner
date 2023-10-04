@@ -12,4 +12,4 @@ class task {
 }
 let tasks = [];
 
-export {tasks};
+export {tasks, task};
