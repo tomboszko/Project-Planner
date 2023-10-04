@@ -36,7 +36,7 @@ let submit = document.getElementById('addTask');
 submit.addEventListener('click', addTaskForm);
 
 
-//
+
 // tasks.push(
 //     new task("title1","todo",new Date(2025,1,25),"blablabla",1),
 //     new task("title2","inprogress",new Date(2023,11,30),"blablabla",2),

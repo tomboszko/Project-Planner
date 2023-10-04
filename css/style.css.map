@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"style.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/abstracts/_fonts.scss","../scss/base/_typography.scss","../scss/abstracts/_rfs.scss","../scss/abstracts/_mixins.scss","../scss/abstracts/_variables.scss","../scss/base/_spacingGeneral.scss","../scss/components/_task.scss","../scss/components/_badge.scss"],"names":[],"mappings":"AAAQ;ACAR;EC2PM,WALI;ECnPR,aCHQ;EDIV;EACE;;;AFDF;ECuPM,WALI;EC3OR,aCXQ;EDYR;EACA;;;AEXF;EACE;;;ACHD;EACC;;;ACDD;EACC;EACA","file":"style.css"}
