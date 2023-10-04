@@ -44,14 +44,12 @@ function changeSorting()
             break;
 
         case "1":
-            console.log("date");
             arr1.sort(compareDays);
             arr2.sort(compareDays);
             arr3.sort(compareDays);
             break;
 
         case "2":
-            console.log("name");
             arr1.sort(compareName);
             arr2.sort(compareName);
             arr3.sort(compareName);

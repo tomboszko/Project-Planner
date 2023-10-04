@@ -24,7 +24,6 @@ function changeFiltering()
 
     switch (filteringInput.value) {
         case "All Tasks":
-            console.log("Default");
             toDoColDisplay.style.visibility = "visible";
             inProgressColDisplay.style.visibility = "visible";
             doneColDisplay.style.visibility = "visible";
@@ -32,51 +31,42 @@ function changeFiltering()
             break;
 
         case "1":
-            console.log("To Do Only");
             toDoColDisplay.style.visibility = "visible";
             inProgressColDisplay.style.visibility = "hidden";
             doneColDisplay.style.visibility = "hidden";
             break;
 
         case "2":
-            console.log("In Progress Only");
             toDoColDisplay.style.visibility = "hidden";
             inProgressColDisplay.style.visibility = "visible";
             doneColDisplay.style.visibility = "hidden";
             break;
 
         case "3":
-            console.log("Done Only");
             toDoColDisplay.style.visibility = "hidden";
             inProgressColDisplay.style.visibility = "hidden";
             doneColDisplay.style.visibility = "visible";
             break;
 
         case "4":
-            console.log("Late tasks only");
             arr1 = findCorrectTiming(arr1, -Infinity, 0);
             arr2 = findCorrectTiming(arr2, -Infinity, 0);
             arr3 = findCorrectTiming(arr3, -Infinity, 0);
             reOrder = true;
-            console.log(arr1);
             break;
 
         case "5":
-            console.log("Urgent tasks only");
             arr1 = findCorrectTiming(arr1, 0, 5);
             arr2 = findCorrectTiming(arr2, 0, 5);
             arr3 = findCorrectTiming(arr3, 0, 5);
             reOrder = true;
-            console.log(arr1);
             break;
 
         case "6":
-            console.log("Not urgent only");
             arr1 = findCorrectTiming(arr1, 5, Infinity);
             arr2 = findCorrectTiming(arr2, 5, Infinity);
             arr3 = findCorrectTiming(arr3, 5, Infinity);
             reOrder = true;
-            console.log(arr1);
             break;
     }
 
