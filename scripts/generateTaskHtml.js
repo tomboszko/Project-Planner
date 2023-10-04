@@ -1,6 +1,6 @@
 ﻿function GenerateTaskHtml(task){
     let taskCard = document.createElement("div");
-    taskCard.classList.add("card","task");
+    taskCard.classList.add("card","task","m-2");
     taskCard.setAttribute("id",task.id);
     taskCard.setAttribute("style","max-width: 50rem;");
     taskCard.innerHTML = template;
