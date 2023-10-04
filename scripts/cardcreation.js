@@ -1,4 +1,9 @@
 import {tasks, task} from "./task.js";
+import {AddTaskToColumn} from "./generateTaskHtml.js";
+
+let id =0;
+
+
 // function createTask(cardElement) {
 //
 //     let title = cardElement.querySelector('.card-title').textContent;
@@ -14,7 +19,8 @@ import {tasks, task} from "./task.js";
 let addItemToDo = document.getElementById('addToDo');  
 addItemToDo.addEventListener('click',function(){
 
-//show form 
+let form = document.getElementById('cardInput');
+form.classList.toggle("d-none");
 
 // "pre remplir" input radio status
 
@@ -29,16 +35,23 @@ function addTaskForm() {
     
 
     let title = titleInput.value;
-    let dueDate = dueDateInput.value;
+    let dueDate = new Date(dueDateInput.value); 
     let description = descriptionInput.value;
     let status = displayRadioValue();
 
-    let newTask = new task(title, status, dueDate, description, 'id');
+
+    let newTask = new task(title, status, dueDate, description, id);
+    id++;
     tasks.push(newTask);
+    AddTaskToColumn(newTask);
+
 
     titleInput.value = '';
     dueDateInput.value = '';
     descriptionInput.value = '';
+
+    let form = document.getElementById('cardInput');
+form.classList.toggle("d-none");
 }
 
 let submit = document.getElementById('addTask');
