@@ -1,6 +1,10 @@
-import {tasks} from "./task.js";
+import {task, tasks} from "./task.js";
 
 let sortingInput = document.getElementById("sortSelect");
+let tasksDisplayed = [];
+setTimeout(() => {
+    tasksDisplayed = Array.from(tasks);
+}, 10);
 
 // compare titles for tasks sorting by name
 function compareName( a, b ) 
@@ -33,7 +37,7 @@ function changeSorting()
     let arr2 = [];
     let arr3 = [];
 
-    tasks.forEach(element => {
+    tasksDisplayed.forEach(element => {
         if (element.status == "todo") arr1.push(element);
         if (element.status == "inprogress") arr2.push(element);
         if (element.status == "done") arr3.push(element);
@@ -74,3 +78,4 @@ function sortTasks(arr, status)
 }
 
 export {changeSorting};
+export {tasksDisplayed};
