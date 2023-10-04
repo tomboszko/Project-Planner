@@ -1,7 +1,5 @@
 import {tasks} from "./task.js";
 
-let filteringInput = document.getElementById("filterSelect");
-filteringInput.addEventListener("change", changeFiltering);
 let toDoColDisplay = document.getElementById("toDoCol");
 let inProgressColDisplay = document.getElementById("inProgressCol");
 let doneColDisplay = document.getElementById("doneProgress");

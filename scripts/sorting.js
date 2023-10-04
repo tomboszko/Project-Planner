@@ -1,8 +1,5 @@
 import {tasks} from "./task.js";
 
-let sortingInput = document.getElementById("sortSelect");
-sortingInput.addEventListener("change", changeSorting);
-
 // compare titles for tasks sorting by name
 function compareName( a, b ) 
 {
