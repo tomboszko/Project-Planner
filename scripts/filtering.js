@@ -1,3 +1,5 @@
+import {tasks} from "./task.js";
+
 let filteringInput = document.getElementById("filterSelect");
 filteringInput.addEventListener("change", changeFiltering);
 let toDoColDisplay = document.getElementById("toDoCol");
