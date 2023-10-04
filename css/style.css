@@ -10,6 +10,23 @@ header {
   padding-left: 1rem;
 }
 
+<<<<<<< HEAD
+=======
+main {
+  background-color: #AED2F9;
+}
+
+.col {
+  background-color: #F6CADD;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  padding: auto;
+  list-style: none;
+}
+
+>>>>>>> design
 footer {
   background-color: #C9B6D7;
   height: 3rem;
