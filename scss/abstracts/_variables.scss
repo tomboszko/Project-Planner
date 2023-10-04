@@ -1,1 +1,19 @@
 $cardFont:'Source Code Pro', sans-serif;
+//fonts
+
+$barbieblue:#AED2F9;
+$barbielightblue:#C5E0FB;
+$barbiepink:#F6CADD;
+$barbiepurple: #C9B6D7;
+
+//mixins media queries
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
