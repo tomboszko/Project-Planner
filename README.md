@@ -32,6 +32,10 @@ The girls are very good and fast with javascript. what a team !!!
 
 Nor real issues, just some struggles with some 'bouts de codes' as usual.
 
-To be continued...
+## Day 2 report:
+
+We finished all the backends tasks, and still some bonus features to implement if we have the time.
+Globally, we can focus on design, we put a deadline for the designing for tomorrow morning.
+I personnaly had some issues with branching --> always be sure of the branch you're working on.
 
 
