@@ -78,3 +78,5 @@ function sortTasks(arr, status)
         }
     }
 }
+
+export {changeSorting};
