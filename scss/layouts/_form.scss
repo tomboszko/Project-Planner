@@ -2,30 +2,29 @@
 {
     position: fixed;
     z-index: 1;
-    top: 10%;
-    left: 10%;
-    width: 80vw;
-    height: 80vh;
-
-    background-color: #c5e0fbfa;
-    border-radius: 25px;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
     display: flex;
-    flex-direction: column;
-    gap: 25px;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    justify-content: center;
+    align-items: center;
 
-    overflow-y: scroll;
-
-    .addTask
+    .formContainer
     {
+        background-color: #c5e0fbfa;
         width: fit-content;
-    }
-}
+        height: fit-content;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        font-family: $cardFont;
 
-#cardInput::-webkit-scrollbar 
-{
-    display: none;
+        .addTask
+        {
+            width: fit-content;
+        }
+    }
 }

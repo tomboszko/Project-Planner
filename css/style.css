@@ -127,28 +127,31 @@ footer {
 #cardInput {
   position: fixed;
   z-index: 1;
-  top: 10%;
-  left: 10%;
-  width: 80vw;
-  height: 80vh;
-  background-color: rgba(197, 224, 251, 0.9803921569);
-  border-radius: 25px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   display: flex;
-  flex-direction: column;
-  gap: 25px;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  overflow-y: scroll;
+  justify-content: center;
+  align-items: center;
 }
-#cardInput .addTask {
+#cardInput .formContainer {
+  background-color: rgba(197, 224, 251, 0.9803921569);
   width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  font-family: "Source Code Pro", sans-serif;
 }
-
-#cardInput::-webkit-scrollbar {
-  display: none;
+#cardInput .formContainer .addTask {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 main {
