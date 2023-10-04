@@ -1,1 +1,18 @@
-/*# sourceMappingURL=style.css.map */
+header {
+  background-color: rgb(22, 223, 223);
+}
+
+header {
+  background-color: rgb(30, 36, 36);
+  color: antiquewhite;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url("./scss/abstracts/Poppins-Regular.ttf");
+}/*# sourceMappingURL=style.css.map */
