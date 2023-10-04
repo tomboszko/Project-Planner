@@ -1,8 +1,8 @@
 import {tasks} from "./task.js";
-import {sortTasks} from "./sorting.js";
+import {AddTaskToColumn} from "./generateTaskHtml.js";
+import {changeSorting} from "./sorting.js";
 
 let filteringInput = document.getElementById("filterSelect");
-
 let toDoColDisplay = document.getElementById("toDoCol");
 let inProgressColDisplay = document.getElementById("inProgressCol");
 let doneColDisplay = document.getElementById("doneProgress");
@@ -17,9 +17,9 @@ function changeFiltering()
     let reOrder = false;
 
     tasks.forEach(element => {
-        if (element.status == "To Do") arr1.push(element);
-        if (element.status == "In progress") arr2.push(element);
-        if (element.status == "Done") arr3.push(element);
+        if (element.status == "todo") arr1.push(element);
+        if (element.status == "inprogress") arr2.push(element);
+        if (element.status == "done") arr3.push(element);
     });
 
     switch (filteringInput.value) {
@@ -28,6 +28,7 @@ function changeFiltering()
             toDoColDisplay.style.visibility = "visible";
             inProgressColDisplay.style.visibility = "visible";
             doneColDisplay.style.visibility = "visible";
+            reOrder = true;
             break;
 
         case "1":
@@ -57,6 +58,7 @@ function changeFiltering()
             arr2 = findCorrectTiming(arr2, -Infinity, 0);
             arr3 = findCorrectTiming(arr3, -Infinity, 0);
             reOrder = true;
+            console.log(arr1);
             break;
 
         case "5":
@@ -65,6 +67,7 @@ function changeFiltering()
             arr2 = findCorrectTiming(arr2, 0, 5);
             arr3 = findCorrectTiming(arr3, 0, 5);
             reOrder = true;
+            console.log(arr1);
             break;
 
         case "6":
@@ -73,6 +76,7 @@ function changeFiltering()
             arr2 = findCorrectTiming(arr2, 5, Infinity);
             arr3 = findCorrectTiming(arr3, 5, Infinity);
             reOrder = true;
+            console.log(arr1);
             break;
     }
 
@@ -82,6 +86,22 @@ function changeFiltering()
         sortTasks(arr2, "inProgressCol");
         sortTasks(arr3, "doneProgress");
     }
+
+    changeSorting();
+}
+
+// called to sort html elements
+function sortTasks(arr, status)
+{
+    let oldCardsDisplay = document.getElementById(status).querySelectorAll(`.card`);
+    oldCardsDisplay.forEach(element => {
+        element.remove();
+    });
+
+
+    arr.forEach(element => {
+        AddTaskToColumn(element);
+    });
 }
 
 // used to find tasks with the correct days remaining
