@@ -1,7 +1,7 @@
 .addCard
 {
-    background-color: #c5e0fb45;
-    color: #92c7ff;
+    background-color: $barbielightblue;
+    color:$barbieblue;
     padding: 0px 5px 2px 5px;
     border: solid #92c7ff73 0.5px;
     font-weight: 500;
@@ -10,12 +10,7 @@
 
 .addCard:hover
 {
-    background-color: #c5e0fb84;
+    background-color: $barbielightblue;
     color: #688aad;
     border: none;
 }
-
-// #C9B6D7
-// #F6CADD
-// #C5E0FB
-// #AED2F9
