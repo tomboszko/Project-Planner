@@ -13,7 +13,7 @@
           crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./scripts/task.js"></script>
-    <script src="./scripts/cardcreation.js"></script>
+    <script defer src="/scripts/cardcreation.js"></script>
 </head>
 <body>
 
@@ -71,6 +71,40 @@
             </div>
         </div>
     </div>
+
+    <form id="cardInput">
+
+        <div class="mb-3">
+            <label for="card-titleInput" class="form-label">Task Title</label>
+            <input type="text" class="form-control" id="card-titleInput" placeholder="task title">
+          </div>
+    
+          <div class="mb-3">
+            <label for="status__Card1Input" class="form-label">Status</label>
+            <div id="status__Card1Input">
+              <input type="radio" id="InputToDo" name="status" value="To Do" />
+              <label for="InputToDo">To do</label>
+              <input type="radio" id="InputInProgress" name="status" value="In progress" />
+              <label for="InputInProgress">In progress</label>
+              <input type="radio" id="InputDone" name="status" value="Done" />
+              <label for="InputDone">Done</label>
+              </div>
+          </div>
+    
+          <div class="mb-3">
+            <label for="dueDate__Card1Input" class="form-label">Due date</label>
+            <input type="date" class="form-control" id="dueDate__Card1Input" placeholder="dd/mm/yyyy">
+          </div>
+    
+          <div class="mb-3">
+            <label for="descriptionCard1Input" class="form-label">Description</label>
+            <textarea class="form-control" id="descriptionCard1Input" rows="3"></textarea>
+          </div>
+    
+          <button type="button" id="addTask" class="addTask btn-secondary">Add Task</button>
+    
+      </form>
+
 </main>
 <footer>
 

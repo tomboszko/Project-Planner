@@ -11,18 +11,27 @@ function createTask(cardElement) {
 }
 
 
+let addItemToDo = document.getElementById('addToDo');  
+addItemToDo.addEventListener('click',function(){
+
+//show form 
+
+// "pre remplir" input radio status
+
+    });
+
 function addTaskForm() {
+
 
     let titleInput = document.getElementById('card-titleInput');
     let dueDateInput = document.getElementById('dueDate__Card1Input');
     let descriptionInput = document.getElementById('descriptionCard1Input');
-    let statusInput =document.getElementById('status__Card1Input');
-
+    
 
     let title = titleInput.value;
     let dueDate = dueDateInput.value;
     let description = descriptionInput.value;
-    let status = statusInput.value;
+    let status = displayRadioValue();
 
     let newTask = new task(title, status, dueDate, description, 'id');
     tasks.push(newTask);
@@ -32,9 +41,23 @@ function addTaskForm() {
     descriptionInput.value = '';
 }
 
-let addButton = document.querySelector('.addTask');
-addButton.addEventListener('click', addTaskForm());
+let submit = document.getElementById('addTask');
+submit.addEventListener('click', addTaskForm);
 
 
+
+function displayRadioValue() {
+
+    var element = document.getElementsByName('status');
+
+    for (i = 0; i < element.length; i++) {
+        if (element[i].checked) {
+         return element[i].value;
+        }
+
+    }
+    return;
+    
+}
 
 
