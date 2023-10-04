@@ -10,6 +10,21 @@ header {
   padding-left: 1rem;
 }
 
+main {
+  background-color: #AED2F9;
+}
+
+.column {
+  background-color: #F6CADD;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 1em;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 footer {
   background-color: #C9B6D7;
   height: 3rem;
@@ -84,6 +99,7 @@ main {
 
 .badge {
   color: white;
+  background-color: rgb(201, 182, 215);
   width: -moz-fit-content;
   width: fit-content;
 }
