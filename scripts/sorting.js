@@ -1,5 +1,5 @@
 import {tasks} from "./task.js";
-
+let sortingInput = document.getElementById("sortSelect");
 // compare titles for tasks sorting by name
 function compareName( a, b ) 
 {
@@ -80,3 +80,5 @@ function sortTasks(arr, status)
 }
 
 export {changeSorting};
+
+export {sortTasks};

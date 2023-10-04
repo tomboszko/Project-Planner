@@ -1,4 +1,7 @@
 import {tasks} from "./task.js";
+import {sortTasks} from "./sorting.js";
+
+let filteringInput = document.getElementById("filterSelect");
 
 let toDoColDisplay = document.getElementById("toDoCol");
 let inProgressColDisplay = document.getElementById("inProgressCol");
