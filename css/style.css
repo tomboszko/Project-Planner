@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap");
+header {
+  background-color: #C9B6D7;
+  color: white;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 1rem;
+}
+
+footer {
+  background-color: #C9B6D7;
+  height: 3rem;
+  color: antiquewhite;
+  text-align: center;
+  position: static;
+}
+
+#cardInput {
+  position: fixed;
+  z-index: 1;
+  top: 10%;
+  left: 10%;
+  width: 80vw;
+  height: 80vh;
+  background-color: rgba(197, 224, 251, 0.9803921569);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  overflow-y: scroll;
+}
+#cardInput .addTask {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#cardInput::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  background-color: #AED2F9;
+}
+
+.column {
+  background-color: #F6CADD;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 1em;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.taskTitle {
+  font-size: 1rem;
+  font-family: "Source Code Pro", sans-serif;
+  font-weight: 500;
+  color: black;
+}
+
+.taskText {
+  font-size: 0.8rem;
+  font-family: "Source Code Pro", sans-serif;
+  font-weight: 400;
+  color: #666666;
+}
+
+.container {
+  max-width: 1440px;
+}
+
+.card > * {
+  background-color: white;
+}
+
+.badge {
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.addCard {
+  background-color: rgba(197, 224, 251, 0.2705882353);
+  color: #92c7ff;
+  padding: 0px 5px 2px 5px;
+  border: solid rgba(146, 199, 255, 0.4509803922) 0.5px;
+  font-weight: 500;
+  border-radius: 50px;
+}
+
+.addCard:hover {
+  background-color: rgba(197, 224, 251, 0.5176470588);
+  color: #688aad;
+  border: none;
+}
+
+.addTask {
+  background-color: #6cb1ff;
+  color: #deecfc;
+  border: none;
+  box-shadow: 0px 0px 0.5px 1px #62aeff;
+  border-radius: 25px;
+}
+
+.addTask:hover {
+  background-color: #3a96ff;
+  color: #afd4ff;
+  box-shadow: none;
+}
+
+.editButton {
+  background-color: rgba(246, 202, 221, 0.5764705882);
+  color: #C9B6D7;
+  padding: 0px 5px 0px 5px;
+  border: solid rgba(201, 182, 215, 0.7333333333) 0.5px;
+  font-weight: 500;
+  border-radius: 25px;
+  font-size: 12px;
+}
+
+.editButton:hover {
+  background-color: rgba(246, 202, 221, 0.6509803922);
+  color: #866b99;
+  border: none;
+}/*# sourceMappingURL=style.css.map */
