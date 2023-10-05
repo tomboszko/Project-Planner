@@ -42,7 +42,7 @@ function DisplayRemainingDays(taskId, time) {
     if (currentElement !== null && currentElement !== undefined) {
 
         let remainingDaysElement = currentElement.querySelector(".remainingTime___Text");
-        remainingDaysElement.innerText = `${time} remaining days`;
+        remainingDaysElement.innerText = `remaining days: ${time}`;
     }
 
 }

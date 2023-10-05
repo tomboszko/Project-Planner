@@ -31,11 +31,7 @@
   font-weight: 600;
 }
 
-.remainingTime___Text {
-  font-size: 0.6rem;
-}
-
-.row {
+#remainingTime___Text #remainingTime__Card1 .row {
   padding-top: 0;
 }
 
