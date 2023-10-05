@@ -1,4 +1,4 @@
-﻿import {tasks} from "./task.js";
+﻿import {GetTasks} from "./task.js";
 
 function RefreshRemainingDays() {
     let tasksElements = document.querySelectorAll(".task");
@@ -22,7 +22,8 @@ function RefreshRemainingDays() {
 }
 
 function GetCard(id) {
-    return tasks.find(t => t.id === id);
+    
+    return GetTasks().find(t => t.id === id);
 }
 
 function ComputeRemainingDays(dueDate) {

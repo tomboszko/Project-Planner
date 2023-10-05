@@ -1,4 +1,4 @@
-import {tasks} from "./task.js";
+import {GetTasks} from "./task.js";
 import {AddTaskToColumn} from "./generateTaskHtml.js";
 import {changeSorting} from "./sorting.js";
 
@@ -14,11 +14,12 @@ function changeFiltering()
     let arr2 = [];
     let arr3 = [];
     let reOrder = false;
-
+    
+    let tasks = GetTasks();
     tasks.forEach(element => {
-        if (element.status == "todo") arr1.push(element);
-        if (element.status == "inprogress") arr2.push(element);
-        if (element.status == "done") arr3.push(element);
+        if (element.status === "todo") arr1.push(element);
+        if (element.status === "inprogress") arr2.push(element);
+        if (element.status === "done") arr3.push(element);
     });
 
     switch (filteringInput.value) {
