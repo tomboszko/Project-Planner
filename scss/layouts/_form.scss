@@ -42,6 +42,13 @@
 
         width: 3.1rem;
     }
+
+    .closeButton
+    {
+        width: fit-content;
+        align-self: flex-end;
+        position: absolute;
+    }
 }
 
 .editForm-buttonContainer {

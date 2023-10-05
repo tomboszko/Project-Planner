@@ -124,6 +124,22 @@
   border: solid rgba(146, 199, 255, 0) 0.5px;
 }
 
+.closeButton {
+  background-color: rgba(246, 202, 221, 0.5764705882);
+  color: #C9B6D7;
+  padding: 0px 5px 0px 5px;
+  border: solid rgba(201, 182, 215, 0.7333333333) 0.5px;
+  font-weight: 500;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.closeButton:hover {
+  background-color: rgba(246, 202, 221, 0.6509803922);
+  color: #866b99;
+  border: none;
+}
+
 header {
   background-color: #C9B6D7;
   color: #688aad;
@@ -216,6 +232,12 @@ footer {
 }
 .form #editTask {
   width: 3.1rem;
+}
+.form .closeButton {
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: flex-end;
+  position: absolute;
 }
 
 .editForm-buttonContainer {

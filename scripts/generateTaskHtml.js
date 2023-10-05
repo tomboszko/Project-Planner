@@ -1,11 +1,13 @@
-import {clickEditButton} from "./editCard.js";
+﻿import {clickEditButton} from "./editCard.js";
+import {startDragTask, endDragTask} from "./dragAndDrop.js";
 import {GetTasks} from "./task.js";
 
 function GenerateTaskHtml(task){
     let taskCard = document.createElement("div");
-    taskCard.classList.add("card","task","m-2","p-2");
+    taskCard.classList.add("card","task","m-2","p-2", "draggable");
     taskCard.setAttribute("id",task.id);
     taskCard.setAttribute("style","max-width: 50rem;");
+    taskCard.setAttribute("draggable", "true");
     taskCard.innerHTML = template;
     FulFillTaskHtml(taskCard,task);
     return taskCard;
@@ -49,8 +51,10 @@ function AddTaskToColumn(task){
     let col = document.querySelector(`.column[status=${CSS.escape(task.status)}]`);
     let taskElement = GenerateTaskHtml(task);
     taskElement.querySelector(".editButton").addEventListener("click", function(){ clickEditButton(task, taskElement) });
-
-    if(col !== null && col !== undefined){
+    taskElement.addEventListener("dragstart", startDragTask);
+    taskElement.addEventListener("dragend", endDragTask);
+    
+    if(col !== null && col !== undefined){        
         col.appendChild(taskElement);
     }
 }

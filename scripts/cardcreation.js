@@ -59,4 +59,4 @@ function preselectStatus(StatusId) {
 }
 
 
-export {preselectStatus,AddTask}
+export {preselectStatus,AddTask, ClearInputForm}
