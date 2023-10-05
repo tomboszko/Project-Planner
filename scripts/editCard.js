@@ -1,18 +1,23 @@
-import {tasks} from "./task.js";
+import {GetTasks, DeleteTask, GetTask, StoreTask, task} from "./task.js";
 import {ComputeRemainingDays} from "./remainingDays.js";
 import {changeSorting} from "./sorting.js";
 
 let form = document.getElementById('cardEdit');
 let taskToEdit;
 let cardToEdit;
+let tasks = [];
+let id;
 
 // function to call when edit button clicked
 function clickEditButton(task, card)
 {
     form.classList.toggle("d-none");
-    taskToEdit = task;
+    id = task.id;
+    tasks = GetTasks();
+    taskToEdit = GetTask(id);
     cardToEdit = card;
     generateForm(task);
+    console.log(tasks);
 }
 
 // called to generate the edit form
@@ -66,12 +71,8 @@ function editTask()
     let month = dueDate.getMonth()+1;
     let day= dueDate.getDate()
 
-    let i = tasks.indexOf(taskToEdit);
-    tasks[i].title = title;
-    tasks[i].status = status;
-    tasks[i].dueDate = dueDate;
-    tasks[i].description = description;
-    tasks[i].remainingDays = remainingDays;
+    let newTask = new task(title, status, dueDate, description, id);
+    StoreTask(newTask);
 
     cardToEdit.querySelector(".card-title").textContent = title;
     cardToEdit.querySelector(".card-text").textContent = description;
@@ -104,8 +105,7 @@ function findRadioValue()
 // called to delete the task
 function deleteTask()
 {
-    let i = tasks.indexOf(taskToEdit);
-    tasks.splice(i, 1);
+    DeleteTask(id)
     cardToEdit.remove();
 
     form.classList.toggle("d-none");

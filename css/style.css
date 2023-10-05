@@ -217,6 +217,16 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
+.form #deleteTask {
+  width: 4.2rem;
+}
+.form #editTask {
+  width: 3.1rem;
+}
+
+.editForm-buttonContainer {
+  text-align: center;
+}
 
 main {
   background-color: rgba(197, 224, 251, 0.4);
