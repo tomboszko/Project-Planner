@@ -31,27 +31,37 @@ let template = `<div class="row g-0 mt-2">
                         </div>
                     </div>`
 function FulFillTaskHtml(taskCard,task){
-    
-    let month = task.dueDate.getMonth()+1;
-    let day= task.dueDate.getDate()
-    
-   taskCard.querySelector(".taskTitle").innerText = task.title;
-   taskCard.querySelector(".taskStatus").innerText = task.status;
-   taskCard.querySelector(".remainingTime___Text").innerText = task.remainingDays + " days";
-   taskCard.querySelector(".cardDescription").innerText = task.description;
-   taskCard.querySelector(".dueDate__Text").innerText = `Due by ${day}/${month}`;
+
+    let month = task.dueDate === null? 0 : task.dueDate.getMonth()+1;
+    let day= task.dueDate === null? 0 : task.dueDate.getDate();
+
+    taskCard.querySelector(".taskTitle").innerText = task.title;
+    taskCard.querySelector(".taskStatus").innerText = task.status;
+    taskCard.querySelector(".remainingTime___Text").innerText = task.remainingDays + " days";
+    taskCard.querySelector(".cardDescription").innerText = task.description;
+    taskCard.querySelector(".dueDate__Text").innerText = `Due by ${day}/${month}`;
 }
 
 function AddTaskToColumn(task){
-    
+
     task.status = (task.status).trim().split(" ").join("").toLowerCase();
-    
+
     let col = document.querySelector(`.column[status=${CSS.escape(task.status)}]`);
     let taskElement = GenerateTaskHtml(task);
-    
-    if(col !== null && col !== undefined){        
+    taskElement.querySelector(".editButton").addEventListener("click", function(){ clickEditButton(task, taskElement) });
+
+    if(col !== null && col !== undefined){
         col.appendChild(taskElement);
     }
 }
 
-export{AddTaskToColumn}
+
+function DisplayAllTasks(){
+    let tasks = GetTasks();
+    for (let task of tasks){
+        AddTaskToColumn(task);
+
+    }
+}
+
+export{AddTaskToColumn, DisplayAllTasks}
