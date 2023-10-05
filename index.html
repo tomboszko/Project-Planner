@@ -13,14 +13,15 @@
     <script type="module" defer src="./scripts/cardcreation.js"></script>
 </head>
 <body>
-<div class="container center">
-<header>
-    <h1 class="textHeader">L.J.T. Project Planner</h1>
-    <p class="textHeader">Control your productivity</p>
 
-</header>
-<main>
-    <div class="container center">
+<div class="container center">
+
+    <header>
+        <h1 class="textHeader">L.J.T. Project Planner</h1>
+        <p class="textHeader">Control your productivity</p>
+    </header>
+    <main>
+    
     <nav class="d-flex flex-row justify-content-center">
         <select id="sortSelect" class="form-select m-2" aria-label="Default select example">
             <option selected>Default</option>
@@ -43,24 +44,27 @@
 
         <div class="row m-auto">
             <div id="toDoCol" status="todo" class="col-md column">
+                To do
                        <button type="button" id="addToDo" class="btn addCard btn-light">Add Item</button>
-            </div>          <!--Added id="addToDo" to button by tom-->
+            </div>         
 
             <div id="inProgressCol" status="inprogress"  class="col-md column">
+                In Progress
                 <button type="button" id="addInProgress" class="btn addCard btn-light">Add Item</button>
             </div>
             <div id="doneProgress" status="done"  class="col-md column">
+                Done
                 <button type="button" id="addDone" class="btn addCard btn-light">Add Item</button>
             </div>
         </div>
  
 
-    <form id="cardInput" class="d-none">
+    <form id="cardInput" class="d-none form">
 
         <div class="formContainer">
 
             <div class="mb-3">
-                <label for="card-titleInput" class="form-label">Task Title</label>
+                <label for="card-titleInput" class="form-label">Task</label>
                 <input type="text" class="form-control" id="card-titleInput" placeholder="task title">
               </div>
         
@@ -86,17 +90,64 @@
                 <textarea class="form-control" id="descriptionCard1Input" rows="3"></textarea>
               </div>
         
-              <button type="button" id="addTask" class="addTask btn-secondary">Add Task</button>
+              <button type="button" id="addTask" class="addTask btn-secondary">Add</button>
 
         </div>
     
     </form>
+
+    <!-- form for edit task -->
+
+    <form id="cardEdit" class="d-none form">
+
+        <div class="formContainer">
+
+            <div class="mb-3">
+                <label for="edit-titleInput" class="form-label">Task</label>
+                <input type="text" class="form-control" id="edit-titleInput" placeholder="task title">
+              </div>
+        
+              <div class="mb-3">
+                <label for="editStatus__Card1Input" class="form-label">Status</label>
+                <div id="editStatus__Card1Input">
+                  <input type="radio" id="EditInputToDo" name="editStatus" value="todo" />
+                  <label for="EditInputToDo">To do</label>
+                  <input type="radio" id="EditInputInProgress" name="editStatus" value="inprogress" />
+                  <label for="EditInputInProgress">In progress</label>
+                  <input type="radio" id="EditInputDone" name="editStatus" value="done" />
+                  <label for="EditInputDone">Done</label>
+                  </div>
+              </div>
+        
+              <div class="mb-3">
+                <label for="editDueDate" class="form-label">Due date</label>
+                <input type="date" class="form-control" id="editDueDate" placeholder="dd/mm/yyyy">
+              </div>
+        
+              <div class="mb-3">
+                <label for="editDescription" class="form-label">Description</label>
+                <textarea class="form-control" id="editDescription" rows="3"></textarea>
+              </div>
+        
+              <div class="editForm-buttonContainer">
+                <button type="button" id="editTask" class="addTask btn-secondary">Edit</button>
+                <button type="button" id="deleteTask" class="addTask btn-secondary">Delete</button>
+              </div>
+
+        </div>
+    
+    </form>
+
     </div>
-</main>
-<footer>
-<p class="footer center"> All rights reserved by the L.J.T. Company</p>
-</footer>
+
+    
+    </main>
 </div>
+    <footer>
+    <p class="footer center"> All rights reserved by the L.J.T. Company</p>
+    </footer>
+
+
 
 </body>
 </html>

@@ -1,3 +1,32 @@
 ﻿.card > * {
   background-color: white;
+  
 }
+
+.card-title {
+
+  margin-bottom: 0;
+}
+
+.dueDate__Text {
+
+  font-size: 0.5rem;
+  color:rgb(246, 202, 221,1);
+  font-weight: 600;
+}
+
+.remainingTime___Text {
+
+  font-size: 0.6rem;
+}
+
+.row {
+  padding-top: 0;
+}
+
+.card {
+
+  padding-top: 0;
+
+}
+

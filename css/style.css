@@ -21,25 +21,60 @@
   background-color: white;
 }
 
+.card-title {
+  margin-bottom: 0;
+}
+
+.dueDate__Text {
+  font-size: 0.5rem;
+  color: rgb(246, 202, 221);
+  font-weight: 600;
+}
+
+.remainingTime___Text {
+  font-size: 0.6rem;
+}
+
+.row {
+  padding-top: 0;
+}
+
+.card {
+  padding-top: 0;
+}
+
 .badge {
   color: white;
-  background-color: rgb(201, 182, 215);
+  background-color: rgb(148, 200, 255);
+  width: -moz-fit-content;
   width: fit-content;
+}
+
+.card-body {
+  padding-top: 0;
+  padding-left: 0;
+}
+
+.card-text {
+  text-align: start;
 }
 
 .addCard {
   background-color: rgba(197, 224, 251, 0.4);
-  color: #92c7ff;
+  color: rgb(148, 200, 255);
   padding: 0px 5px 2px 5px;
   border: solid rgba(146, 199, 255, 0.4509803922) 0.5px;
   font-weight: 500;
   border-radius: 50px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .addCard:hover {
   background-color: rgba(197, 224, 251, 0.4);
   color: #688aad;
-  border: none;
+  border: solid rgba(146, 199, 255, 0) 0.5px;
 }
 
 .addTask {
@@ -69,98 +104,139 @@
 .editButton:hover {
   background-color: rgba(246, 202, 221, 0.6509803922);
   color: #866b99;
-  border: none;
+  border: solid rgba(201, 182, 215, 0) 0.5px;
 }
 
 .form-select {
   background-color: rgba(197, 224, 251, 0.4);
-  color: #92c7ff;
+  color: rgb(148, 200, 255);
   padding: 0 5px 2px 5px;
   border: solid rgba(146, 199, 255, 0.4509803922) 0.5px;
   font-weight: 500;
   border-radius: 50px;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
 .form-select:hover {
   background-color: rgba(197, 224, 251, 0.5176470588);
   color: #688aad;
-  border: none;
+  border: solid rgba(146, 199, 255, 0) 0.5px;
 }
 
 header {
   background-color: #C9B6D7;
-  color: white;
+  color: #688aad;
+  font-family: "Source Code Pro", sans-serif;
   display: flex;
   align-items: start;
   flex-direction: column;
   margin-right: auto;
   margin-left: auto;
   padding-left: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 
 main {
   background-color: rgba(197, 224, 251, 0.4);
+  margin-bottom: 3rem;
+  border-radius: 1rem;
 }
 
 .column {
   background-color: rgba(246, 202, 221, 0.7);
+  justify-content: center;
   margin-right: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-top: 1px;
   border-radius: 1em;
   font-size: 1rem;
   font-weight: 600;
+  color: #688aad;
 }
 
 footer {
-  background-color: #C9B6D7;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   height: 3rem;
-  color: antiquewhite;
   text-align: center;
-  position: static;
+  background-color: #C9B6D7;
+  color: #688aad;
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 0.7rem;
+  padding-top: 1rem;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-#cardInput {
+.container center {
+  position: relative;
+  min-height: 100vh;
+  margin-bottom: 3rem;
+}
+
+.form {
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#cardInput .formContainer {
+.form .formContainer {
   background-color: rgba(197, 224, 251, 0.9803921569);
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   padding: 15px;
   font-family: "Source Code Pro", sans-serif;
+  font-weight: 600;
+  color: #688aad;
 }
-#cardInput .formContainer .addTask {
-  width: fit-content;
+.form .formContainer .addTask {
+  width: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form #deleteTask {
+  width: 4.2rem;
+}
+.form #editTask {
+  width: 3.1rem;
+}
+
+.editForm-buttonContainer {
+  text-align: center;
 }
 
 main {
   background-color: rgba(197, 224, 251, 0.4);
+  margin-bottom: 3rem;
+  border-radius: 1rem;
 }
 
 .column {
   background-color: rgba(246, 202, 221, 0.7);
+  justify-content: center;
   margin-right: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-top: 1px;
   border-radius: 1em;
   font-size: 1rem;
   font-weight: 600;
-}
-
-/*# sourceMappingURL=style.css.map */
+  color: #688aad;
+}/*# sourceMappingURL=style.css.map */

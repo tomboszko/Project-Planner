@@ -1,4 +1,5 @@
-﻿import {GetTasks} from "./task.js";
+import {clickEditButton} from "./editCard.js";
+import {GetTasks} from "./task.js";
 
 function GenerateTaskHtml(task){
     let taskCard = document.createElement("div");
@@ -31,8 +32,8 @@ let template = `<div class="row g-0 mt-2">
                     </div>`
 function FulFillTaskHtml(taskCard,task){
     
-    let month = task.dueDate === null? 0 : task.dueDate.getMonth()+1;
-    let day= task.dueDate === null? 0 : task.dueDate.getDate();
+    let month = task.dueDate.getMonth()+1;
+    let day= task.dueDate.getDate()
     
    taskCard.querySelector(".taskTitle").innerText = task.title;
    taskCard.querySelector(".taskStatus").innerText = task.status;
@@ -53,13 +54,4 @@ function AddTaskToColumn(task){
     }
 }
 
-
-function DisplayAllTasks(){
-    let tasks = GetTasks();
-    for (let task of tasks){
-        AddTaskToColumn(task);
-
-    }
-}
-
-export{AddTaskToColumn, DisplayAllTasks}
+export{AddTaskToColumn}

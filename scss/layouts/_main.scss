@@ -1,21 +1,28 @@
 
 main {
     background-color: $barbielightblue;
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+   
+    
 }
 
 .column {
 background-color: $barbielightpink;
+justify-content: center;
 
 margin: {
     right: 1rem;
-    top: 1rem;
-    bottom: 1rem;
+    bottom: 0.5rem; 
 }
-padding-bottom: 1rem;
+padding-bottom: 0.5rem;
+padding-top: 1px;
 border-radius: 1em;
-
 font-size: 1rem;
 font-weight: 600;
-
+color:#688aad;
 
 }
+
+
+

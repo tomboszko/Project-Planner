@@ -1,4 +1,4 @@
-#cardInput
+.form
 {
     position: fixed;
     z-index: 1;
@@ -21,10 +21,30 @@
         flex-direction: column;
         padding: 15px;
         font-family: $cardFont;
+        font-weight: 600;
+        color:#688aad;
 
         .addTask
         {
-            width: fit-content;
+            width: 3rem;
+            margin-left: auto;
+            margin-right: auto;
+            
         }
     }
+
+    #deleteTask {
+
+        width:4.2rem;
+    }
+
+    #editTask {
+
+        width: 3.1rem;
+    }
+}
+
+.editForm-buttonContainer {
+
+    text-align: center;
 }
