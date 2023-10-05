@@ -10,22 +10,24 @@ function GenerateTaskHtml(task){
     return taskCard;
 }
 
-let template = `<div class="row g-0 mt-2">
-                        <div class="col-8">
+let template = `<div class="row g-0 mt-0">
+                        <div class="col-7">
                             <div id="bodyCard1" class="card-body">
                                 <h5 id="titleCard1" class="card-title taskTitle"></h5>
                                 <p id="dueDate__Card1" class="dueDate__Text taskText p-0 m-0"></p>
                                 <p id="descriptionCard1" class="card-text cardDescription taskText"></p>
                             </div>
                         </div>
-                        <div class="col-4 text-end pe-2 d-flex flex-column justify-content-evenly align-items-end">
+                        <div class="col-4">
+                        <div class="wrapper dueTime d-flex flex-column">
+                        
+                        
+                    </div></div>
+                        <div class="col-1 text-end pe-0 d-flex flex-column justify-content-around align-items-end">
                             
                             <span id="status__Card1" class="badge taskText taskStatus "></span>
-                            
-                            <div class="wrapper dueTime d-flex flex-column">
-                                <p id="remainingTime__Card1" class="remainingTime___Text taskText p-0 m-0"></p>
-                                
-                            </div>
+                            <p id="remainingTime__Card1" class="remainingTime___Text taskText p-0 m-0"></p>
+                          
 
                             <button id="editBtn-Card1" type="button" class="btn editButton taskText align-self-end">Edit</button>
                         </div>
