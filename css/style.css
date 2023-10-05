@@ -59,10 +59,6 @@
   text-align: start;
 }
 
-.row.g-0.mt-2 {
-  margin-top: 0rem;
-}
-
 .addCard {
   background-color: rgba(197, 224, 251, 0.4);
   color: rgb(148, 200, 255);
@@ -78,7 +74,7 @@
 .addCard:hover {
   background-color: rgba(197, 224, 251, 0.4);
   color: #688aad;
-  border: none;
+  border: solid rgba(146, 199, 255, 0) 0.5px;
 }
 
 .addTask {
@@ -108,7 +104,7 @@
 .editButton:hover {
   background-color: rgba(246, 202, 221, 0.6509803922);
   color: #866b99;
-  border: none;
+  border: solid rgba(201, 182, 215, 0) 0.5px;
 }
 
 .form-select {
@@ -125,7 +121,7 @@
 .form-select:hover {
   background-color: rgba(197, 224, 251, 0.5176470588);
   color: #688aad;
-  border: none;
+  border: solid rgba(146, 199, 255, 0) 0.5px;
 }
 
 header {
