@@ -6,8 +6,6 @@ import {changeSorting} from "./scripts/sorting.js";
 import {changeFiltering} from "./scripts/filtering.js";
 
 DisplayAllTasks();
-let id= 7;
-DeleteTask(id);
 RefreshRemainingDays();
 
 
