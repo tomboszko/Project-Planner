@@ -1,9 +1,11 @@
 
 footer {
 
+position:fixed ;
+bottom: 0;
+width: 100%;
 height: 3rem;
 text-align: center;
-position: sticky;
 background-color:#C9B6D7;
 color:#688aad;
 font-family: $cardFont;
@@ -12,5 +14,22 @@ font-size: 0.7rem;
 }
 
 p {
-    padding-top: 1rem;;
+    padding-top: 1rem;
+    text-align: center;
 }
+
+.container center {
+
+  position: relative;
+  min-height: 100vh;
+  margin-bottom: 3rem;
+ 
+}
+
+
+
+
+
+
+  
+ 

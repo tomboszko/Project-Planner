@@ -13,14 +13,16 @@
     <script type="module" defer src="./scripts/cardcreation.js"></script>
 </head>
 <body>
-<div class="container center">
-<header>
-    <h1 class="textHeader">L.J.T. Project Planner</h1>
-    <p class="textHeader">Control your productivity</p>
 
-</header>
-<main>
-    <div class="container center">
+<div class="container center">
+
+    <header>
+        <h1 class="textHeader">L.J.T. Project Planner</h1>
+        <p class="textHeader">Control your productivity</p>
+
+    </header>
+    <main>
+    
     <nav class="d-flex flex-row justify-content-center">
         <select id="sortSelect" class="form-select m-2" aria-label="Default select example">
             <option selected>Default</option>
@@ -45,9 +47,8 @@
             <div id="toDoCol" status="todo" class="col-md column">
                 To do
                        <button type="button" id="addToDo" class="btn addCard btn-light">Add Item</button>
-            </div>          
+            </div>         
 
-            
             <div id="inProgressCol" status="inprogress"  class="col-md column">
                 In Progress
                 <button type="button" id="addInProgress" class="btn addCard btn-light">Add Item</button>
@@ -64,12 +65,12 @@
         <div class="formContainer">
 
             <div class="mb-3">
-                <label for="card-titleInput" class="form-label">Task:</label>
+                <label for="card-titleInput" class="form-label">Task</label>
                 <input type="text" class="form-control" id="card-titleInput" placeholder="task title">
               </div>
         
               <div class="mb-3">
-                <label for="status__Card1Input" class="form-label">Status:</label>
+                <label for="status__Card1Input" class="form-label">Status</label>
                 <div id="status__Card1Input">
                   <input type="radio" id="InputToDo" name="status" value="To Do" />
                   <label for="InputToDo">To do</label>
@@ -86,21 +87,23 @@
               </div>
         
               <div class="mb-3">
-                <label for="descriptionCard1Input" class="form-label">Description:</label>
+                <label for="descriptionCard1Input" class="form-label">Description</label>
                 <textarea class="form-control" id="descriptionCard1Input" rows="3"></textarea>
               </div>
         
-              <button type="button" id="addTask" class="addTask btn-secondary">Add Task</button>
+              <button type="button" id="addTask" class="addTask btn-secondary">Add</button>
 
         </div>
     
     </form>
     </div>
-</main>
-<footer>
-<p class="footer center"> All rights reserved by the L.J.T. Company</p>
-</footer>
-</div>
 
+    
+
+    <footer>
+    <p class="footer center"> All rights reserved by the L.J.T. Company</p>
+    </footer>
+</main>
+</div>
 </body>
 </html>
