@@ -73,5 +73,17 @@ function CreateJSTask(title, status, dueDate, description) {
     return new task(title, status, dueDate, description, ++lastId);
 }
 
+function DeleteTask(id){
+    
+        localStorage.removeItem(id);
+}
 
-export {GetTasks, GetTask, StoreTask, CreateJSTask, task};
+function DeleteTasks(ids){
+    
+    for (let id of ids){
+        DeleteTask(id);
+    }
+}
+
+
+export {GetTasks, GetTask, StoreTask, CreateJSTask,DeleteTask, DeleteTasks, task};

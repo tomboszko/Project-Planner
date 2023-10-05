@@ -1,13 +1,13 @@
 import {RefreshRemainingDays} from "./scripts/remainingDays.js";
-import {GetTasks, GetTask} from "./scripts/task.js";
+import {GetTasks, GetTask, DeleteTask} from "./scripts/task.js";
 import {DisplayAllTasks} from "./scripts/generateTaskHtml.js";
 import {AddTask,preselectStatus} from "./scripts/cardcreation.js";
 import {changeSorting} from "./scripts/sorting.js";
 import {changeFiltering} from "./scripts/filtering.js";
 
 DisplayAllTasks();
-let t1 = GetTasks([1,2,4]);
-let t2 = GetTask(0);
+let id= 7;
+DeleteTask(id);
 RefreshRemainingDays();
 
 
