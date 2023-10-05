@@ -28,4 +28,13 @@ function GetTasks(){
 
 }
 
-export {GetTasks, task};
+
+
+
+function StoreTask(task){
+    // tasks.push(task);
+    localStorage.setItem(task.id,JSON.stringify(task));
+}
+
+
+export {GetTasks, StoreTask, task};

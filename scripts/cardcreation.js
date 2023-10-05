@@ -1,11 +1,10 @@
-import {task} from "./task.js";
+import {task, StoreTask} from "./task.js";
 import {AddTaskToColumn} from "./generateTaskHtml.js";
 
 
 let titleInput = document.getElementById('card-titleInput');
 let dueDateInput = document.getElementById('dueDate__Card1Input');
 let descriptionInput = document.getElementById('descriptionCard1Input');
-
 
 
 function AddTask() {
@@ -28,13 +27,6 @@ function CreateJSTask() {
     //id++;
     return new task(title, status, dueDate, description, ++lastId);
 }
-
-function StoreTask(task){
-   // tasks.push(task);
-    localStorage.setItem(task.id,JSON.stringify(task));
-}
-
-
 
 function ClearInputForm(){
 
