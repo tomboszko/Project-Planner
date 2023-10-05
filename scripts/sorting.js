@@ -1,4 +1,4 @@
-import {task, tasks} from "./task.js";
+import {GetTasks} from "./task.js";
 
 let sortingInput = document.getElementById("sortSelect");
 
@@ -33,10 +33,10 @@ function changeSorting()
     let arr2 = [];
     let arr3 = [];
 
-    tasks.forEach(element => {
-        if (element.status == "todo") arr1.push(element);
-        if (element.status == "inprogress") arr2.push(element);
-        if (element.status == "done") arr3.push(element);
+    GetTasks().forEach(element => {
+        if (element.status === "todo") arr1.push(element);
+        if (element.status === "inprogress") arr2.push(element);
+        if (element.status === "done") arr3.push(element);
     });
 
     switch (sortingInput.value) {
