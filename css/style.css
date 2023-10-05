@@ -220,24 +220,26 @@ footer {
   font-weight: 600;
   color: #688aad;
 }
-.form .formContainer .editForm-buttonContainer {
-  display: flex;
-  justify-content: space-between;
-}
-.form .formContainer .editForm-buttonContainer .addTask {
+.form .formContainer .addTask {
   width: 3rem;
   margin-left: auto;
   margin-right: auto;
 }
-.form .formContainer .editForm-buttonContainer #editTask, .form .formContainer .editForm-buttonContainer #deleteTask {
-  width: -moz-fit-content;
-  width: fit-content;
+.form #deleteTask {
+  width: 4.2rem;
 }
-.form .formContainer .closeButton {
+.form #editTask {
+  width: 3.1rem;
+}
+.form .closeButton {
   width: -moz-fit-content;
   width: fit-content;
   align-self: flex-end;
   position: absolute;
+}
+
+.editForm-buttonContainer {
+  text-align: center;
 }
 
 main {

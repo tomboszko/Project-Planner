@@ -50,7 +50,7 @@ function displayRadioValue(status)
 
 let validateButton = document.getElementById("editTask");
 let deleteButton = document.getElementById("deleteTask");
-let closeButton = document.getElementById("closeEdit");
+let closeButton = document.getElementById("closeEditForm");
 
 validateButton.addEventListener("click", editTask)
 deleteButton.addEventListener("click", deleteTask);

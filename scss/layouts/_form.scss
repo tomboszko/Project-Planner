@@ -24,31 +24,34 @@
         font-weight: 600;
         color:#688aad;
 
-
-        .editForm-buttonContainer
+        .addTask
         {
-            display: flex;
-            justify-content: space-between;
-
-            .addTask
-            {
-                width: 3rem;
-                margin-left: auto;
-                margin-right: auto;
-                
-            }
-
-            #editTask, #deleteTask
-            {
-                width: fit-content;
-            }
-        }
-
-        .closeButton
-        {
-            width: fit-content;
-            align-self: flex-end;
-            position: absolute;
+            width: 3rem;
+            margin-left: auto;
+            margin-right: auto;
+            
         }
     }
+
+    #deleteTask {
+
+        width:4.2rem;
+    }
+
+    #editTask {
+
+        width: 3.1rem;
+    }
+
+    .closeButton
+    {
+        width: fit-content;
+        align-self: flex-end;
+        position: absolute;
+    }
+}
+
+.editForm-buttonContainer {
+
+    text-align: center;
 }

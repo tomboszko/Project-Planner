@@ -1,7 +1,7 @@
 import {RefreshRemainingDays} from "./scripts/remainingDays.js";
 import {GetTasks, GetTask, DeleteTask} from "./scripts/task.js";
 import {DisplayAllTasks} from "./scripts/generateTaskHtml.js";
-import {AddTask,preselectStatus} from "./scripts/cardcreation.js";
+import {AddTask,preselectStatus,ClearInputForm} from "./scripts/cardcreation.js";
 import {changeSorting} from "./scripts/sorting.js";
 import {changeFiltering} from "./scripts/filtering.js";
 
@@ -36,6 +36,9 @@ addItemDone.addEventListener('click', function () {
 
 let submit = document.getElementById('addTask');
 submit.addEventListener('click', AddTask);
+
+let closeForm = document.getElementById("closeAddForm");
+closeForm.addEventListener("click", ClearInputForm);
 
 
 
