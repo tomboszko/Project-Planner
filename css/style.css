@@ -31,12 +31,16 @@
   font-weight: 600;
 }
 
-#remainingTime___Text #remainingTime__Card1 .row {
+.remainingTime___Text {
+  text-align: start;
+}
+
+.row {
   padding-top: 0;
 }
 
-.card {
-  padding-top: 0;
+.card-body {
+  text-align: start;
 }
 
 .remainingTime___Text {

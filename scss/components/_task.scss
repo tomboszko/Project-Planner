@@ -15,8 +15,11 @@
   font-weight: 600;
 }
 
-#remainingTime___Text 
-#remainingTime__Card1
+.remainingTime___Text {
+
+ text-align: start;
+}
+
 
 
 
@@ -24,10 +27,8 @@
   padding-top: 0;
 }
 
-.card {
-
-  padding-top: 0;
-
+.card-body {
+  text-align: start;
 }
 
 .remainingTime___Text {
