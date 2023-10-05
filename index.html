@@ -13,53 +13,40 @@
     <script type="module" defer src="./scripts/cardcreation.js"></script>
 </head>
 <body>
-
+<div class="container center">
 <header>
     <h1 class="textHeader">L.J.T. Project Planner</h1>
     <p class="textHeader">Control your productivity</p>
 
 </header>
 <main>
-    <select id="sortSelect" class="form-select" aria-label="Default select example">
-        <option selected>Default</option>
-        <option value="1">Remaining Days</option>
-        <option value="2">Name</option>
-    </select>
+    <div class="container center">
+    <nav class="d-flex flex-row justify-content-center">
+        <select id="sortSelect" class="form-select m-2" aria-label="Default select example">
+            <option selected>Default</option>
+            <option value="1">Remaining Days</option>
+            <option value="2">Name</option>
+        </select>
 
-    <select id="filterSelect" class="form-select" aria-label="Default select example">
-        <option selected>All Tasks</option>
-        <option value="1">To Do Only</option>
-        <option value="2">In Progress Only</option>
-        <option value="3">Done Only</option>
-        <option value="4">Late Tasks Only</option>
-        <option value="5">Urgent Tasks Only</option>
-        <option value="6">Not Urgent Tasks Only</option>
-    </select>
+        <select id="filterSelect" class="form-select m-2" aria-label="Default select example">
+            <option selected>All Tasks</option>
+            <option value="1">To Do Only</option>
+            <option value="2">In Progress Only</option>
+            <option value="3">Done Only</option>
+            <option value="4">Late Tasks Only</option>
+            <option value="5">Urgent Tasks Only</option>
+            <option value="6">Not Urgent Tasks Only</option>
+        </select>
+    </nav>
 
 
-    <div class="container">
-        <div class="row">
+
+        <div class="row m-auto">
             <div id="toDoCol" status="todo" class="col-md column">
-                To do
-
-                <!--<div id="1" class="card task" style="width: 18rem;">
-                    <div class="card-header">
-                        <h5 id="titleCard1" class="card-title">Task Title</h5>
-                        <span id="status__Card1" class="badge text-bg-primary">Status</span>
-                        <p id="remainingTime__Card1" class="remainingTime___Text">Remaining Time</p>
-                    </div>
-                    <div id="bodyCard1" class="card-body">
-                        <p id="descriptionCard1" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <div class="card-footer">
-                        <p id="dueDate__Card1" class="dueDate__Text">01/01/2021</p>
-                        <button id="editBtn-Card1" type="button" class="btn editButton">Edit</button>
-                    </div>
-                </div>-->
-
-                <button type="button" id="addToDo" class="btn addCard btn-light">Add Item</button>
+                       <button type="button" id="addToDo" class="btn addCard btn-light">Add Item</button>
             </div>          <!--Added id="addToDo" to button by tom-->
 
+            <div id="inProgressCol" status="inprogress"  class="col-md column">
             <div id="inProgressCol" status="inprogress"  class="col-md column">
                 In Progress
                 <button type="button" id="addInProgress" class="btn addCard btn-light">Add Item</button>
@@ -69,44 +56,50 @@
                 <button type="button" id="addDone" class="btn addCard btn-light">Add Item</button>
             </div>
         </div>
-    </div>
+ 
 
     <form id="cardInput" class="d-none">
 
-        <div class="mb-3">
-            <label for="card-titleInput" class="form-label">Task Title</label>
-            <input type="text" class="form-control" id="card-titleInput" placeholder="task title">
-          </div>
-    
-          <div class="mb-3">
-            <label for="status__Card1Input" class="form-label">Status</label>
-            <div id="status__Card1Input">
-              <input type="radio" id="InputToDo" name="status" value="To Do" />
-              <label for="InputToDo">To do</label>
-              <input type="radio" id="InputInProgress" name="status" value="In progress" />
-              <label for="InputInProgress">In progress</label>
-              <input type="radio" id="InputDone" name="status" value="Done" />
-              <label for="InputDone">Done</label>
-              </div>
-          </div>
-    
-          <div class="mb-3">
-            <label for="dueDate__Card1Input" class="form-label">Due date</label>
-            <input type="date" class="form-control" id="dueDate__Card1Input" placeholder="dd/mm/yyyy">
-          </div>
-    
-          <div class="mb-3">
-            <label for="descriptionCard1Input" class="form-label">Description</label>
-            <textarea class="form-control" id="descriptionCard1Input" rows="3"></textarea>
-          </div>
-    
-          <button type="button" id="addTask" class="addTask btn-secondary">Add Task</button>
-    
-      </form>
+        <div class="formContainer">
 
+            <div class="mb-3">
+                <label for="card-titleInput" class="form-label">Task Title</label>
+                <input type="text" class="form-control" id="card-titleInput" placeholder="task title">
+              </div>
+        
+              <div class="mb-3">
+                <label for="status__Card1Input" class="form-label">Status</label>
+                <div id="status__Card1Input">
+                  <input type="radio" id="InputToDo" name="status" value="To Do" />
+                  <label for="InputToDo">To do</label>
+                  <input type="radio" id="InputInProgress" name="status" value="In progress" />
+                  <label for="InputInProgress">In progress</label>
+                  <input type="radio" id="InputDone" name="status" value="Done" />
+                  <label for="InputDone">Done</label>
+                  </div>
+              </div>
+        
+              <div class="mb-3">
+                <label for="dueDate__Card1Input" class="form-label">Due date</label>
+                <input type="date" class="form-control" id="dueDate__Card1Input" placeholder="dd/mm/yyyy">
+              </div>
+        
+              <div class="mb-3">
+                <label for="descriptionCard1Input" class="form-label">Description</label>
+                <textarea class="form-control" id="descriptionCard1Input" rows="3"></textarea>
+              </div>
+        
+              <button type="button" id="addTask" class="addTask btn-secondary">Add Task</button>
+
+        </div>
+    
+    </form>
+    </div>
 </main>
 <footer>
-<p class="footer"> All rights reserved by the L.J.T. Company</p>
+<p class="footer center"> All rights reserved by the L.J.T. Company</p>
 </footer>
+</div>
+
 </body>
 </html>

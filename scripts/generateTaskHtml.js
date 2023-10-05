@@ -1,6 +1,6 @@
 ﻿function GenerateTaskHtml(task){
     let taskCard = document.createElement("div");
-    taskCard.classList.add("card","task");
+    taskCard.classList.add("card","task","m-2","p-2");
     taskCard.setAttribute("id",task.id);
     taskCard.setAttribute("style","max-width: 50rem;");
     taskCard.innerHTML = template;
@@ -17,7 +17,7 @@ let template = `<div class="row g-0 mt-2">
                         </div>
                         <div class="col-4 text-end pe-2 d-flex flex-column justify-content-evenly align-items-end">
                             
-                            <span id="status__Card1" class="badge bg-secondary taskText taskStatus "></span>
+                            <span id="status__Card1" class="badge taskText taskStatus "></span>
                             
                             <div class="wrapper dueTime d-flex flex-column">
                                 <p id="remainingTime__Card1" class="remainingTime___Text taskText p-0 m-0"></p>
@@ -41,9 +41,9 @@ function FulFillTaskHtml(taskCard,task){
 
 function AddTaskToColumn(task){
     
-    let statusValue = (task.status).trim().split(" ").join("").toLowerCase();
+    task.status = (task.status).trim().split(" ").join("").toLowerCase();
     
-    let col = document.querySelector(`.column[status=${CSS.escape(statusValue)}]`);
+    let col = document.querySelector(`.column[status=${CSS.escape(task.status)}]`);
     let taskElement = GenerateTaskHtml(task);
     
     if(col !== null && col !== undefined){        

@@ -1,4 +1,4 @@
-import {tasks} from "./task.js";
+import {task, tasks} from "./task.js";
 
 let sortingInput = document.getElementById("sortSelect");
 
@@ -64,9 +64,9 @@ function changeSorting()
 // called to sort html elements
 function sortTasks(arr, status)
 {
-    if (document.getElementById(status).querySelectorAll(".card").length > 0)
+    for (let i = 0; i < arr.length; i++) 
     {
-        for (let i = 0; i < arr.length; i++) 
+        if (document.getElementById(arr[i].id) != null)
         {
             document.getElementById(status).append(document.getElementById(arr[i].id));
         }
