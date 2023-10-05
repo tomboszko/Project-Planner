@@ -1,51 +1,39 @@
-import {tasks, task} from "./task.js";
+import {StoreTask, CreateJSTask} from "./task.js";
 import {AddTaskToColumn} from "./generateTaskHtml.js";
 
-let id = 0;
+
+let titleInput = document.getElementById('card-titleInput');
+let dueDateInput = document.getElementById('dueDate__Card1Input');
+let descriptionInput = document.getElementById('descriptionCard1Input');
 
 
-// function createTask(cardElement) {
-//
-//     let title = cardElement.querySelector('.card-title').textContent;
-//     let status = cardElement.querySelector('.badge').textContent;
-//     let dueDate = cardElement.querySelector('.dueDate__Text').textContent;
-//     let description = cardElement.querySelector('.card-text').textContent;
-//     let id = cardElement.id;
-//
-//     return new task(title, status, dueDate, description, id);
-// }
+function AddTask() {
 
-function preselectStatus(StatusId) {
-
-    let form = document.getElementById('cardInput');
-    document.getElementById(StatusId).checked = true;
-    form.classList.toggle("d-none");
+    let newTask = CreateTask();
+    StoreTask(newTask);
+    AddTaskToColumn(newTask);
+    ClearInputForm();
 
 }
-function addTaskForm() {
 
-
-    let titleInput = document.getElementById('card-titleInput');
-    let dueDateInput = document.getElementById('dueDate__Card1Input');
-    let descriptionInput = document.getElementById('descriptionCard1Input');
-
+function CreateTask() {
 
     let title = titleInput.value;
     let dueDate = new Date(dueDateInput.value);
     let description = descriptionInput.value;
-    let status = displayRadioValue();
+    let status = displayRadioValue().trim().split(" ").join("").toLowerCase();
 
 
-    let newTask = new task(title, status, dueDate, description, id);
-    id++;
-    tasks.push(newTask);
-    AddTaskToColumn(newTask);
+    return CreateJSTask(title,status,dueDate,description);  
+}
 
+function ClearInputForm(){
 
+//Empty the form
     titleInput.value = '';
     dueDateInput.value = '';
     descriptionInput.value = '';
-
+//Hide the form
     let form = document.getElementById('cardInput');
     form.classList.toggle("d-none");
 }
@@ -62,4 +50,13 @@ function displayRadioValue() {
 
 }
 
-export {preselectStatus,addTaskForm}
+function preselectStatus(StatusId) {
+
+    let form = document.getElementById('cardInput');
+    document.getElementById(StatusId).checked = true;
+    form.classList.toggle("d-none");
+
+}
+
+
+export {preselectStatus,AddTask}

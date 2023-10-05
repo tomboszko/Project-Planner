@@ -24,7 +24,6 @@
 .badge {
   color: white;
   background-color: rgb(201, 182, 215);
-  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -80,7 +79,6 @@
   border: solid rgba(146, 199, 255, 0.4509803922) 0.5px;
   font-weight: 500;
   border-radius: 50px;
-  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -131,17 +129,14 @@ footer {
   left: 0;
   width: 100vw;
   height: 100vh;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .form .formContainer {
   background-color: rgba(197, 224, 251, 0.9803921569);
-  width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   border-radius: 10px;
   display: flex;
@@ -149,11 +144,7 @@ footer {
   padding: 15px;
   font-family: "Source Code Pro", sans-serif;
 }
-.form .formContainer .editForm-buttonContainer {
-  display: flex;
-  justify-content: space-between;
-}
-.form .formContainer .editForm-buttonContainer .addTask {
+#cardInput .formContainer .addTask {
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -171,4 +162,6 @@ main {
   border-radius: 1em;
   font-size: 1rem;
   font-weight: 600;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
