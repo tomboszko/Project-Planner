@@ -1,4 +1,5 @@
 ﻿import {clickEditButton} from "./editCard.js";
+import {startDragTask, endDragTask} from "./dragAndDrop.js";
 
 function GenerateTaskHtml(task){
     let taskCard = document.createElement("div");
@@ -49,6 +50,8 @@ function AddTaskToColumn(task){
     let col = document.querySelector(`.column[status=${CSS.escape(task.status)}]`);
     let taskElement = GenerateTaskHtml(task);
     taskElement.querySelector(".editButton").addEventListener("click", function(){ clickEditButton(task, taskElement) });
+    taskElement.addEventListener("dragstart", startDragTask);
+    taskElement.addEventListener("dragend", endDragTask);
     
     if(col !== null && col !== undefined){        
         col.appendChild(taskElement);

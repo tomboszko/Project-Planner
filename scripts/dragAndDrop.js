@@ -1,19 +1,27 @@
 let draggables = document.querySelectorAll(".draggable");
 const containers = document.querySelectorAll(".dropContainer");
 
-console.log(containers);
+function startDragTask(e)
+{
+    console.log("drag start");
+    e.target.classList.add("dragging");
+    console.log(e.target);
+}
 
-console.log(draggables);
+function endDragTask(e)
+{
+    console.log("drag end");
+    e.target.classList.remove("dragging");
+    console.log(e.target.parentNode);
+}
 
-draggables.forEach(element => {
-    element.addEventListener("dragstart", function(){
-        console.log("drag start");
+containers.forEach(element => {
+    element.addEventListener("dragover", function(e){
+        e.preventDefault();
+        const draggable = document.querySelector(".dragging");
+        element.append(draggable);
     })
 });
 
-function startDragTask()
-{
-    console.log("drag start");
-}
-
 export {startDragTask};
+export {endDragTask};
