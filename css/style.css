@@ -132,17 +132,20 @@ header {
   margin-right: auto;
   margin-left: auto;
   padding-left: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 
 main {
   background-color: rgba(197, 224, 251, 0.4);
   margin-bottom: 3rem;
+  border-radius: 1rem;
 }
 
 .column {
   background-color: rgba(246, 202, 221, 0.7);
+  justify-content: center;
   margin-right: 1rem;
-  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
   padding-top: 1px;
@@ -210,12 +213,13 @@ footer {
 main {
   background-color: rgba(197, 224, 251, 0.4);
   margin-bottom: 3rem;
+  border-radius: 1rem;
 }
 
 .column {
   background-color: rgba(246, 202, 221, 0.7);
+  justify-content: center;
   margin-right: 1rem;
-  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
   padding-top: 1px;
