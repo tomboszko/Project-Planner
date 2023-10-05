@@ -18,18 +18,10 @@ let template = `<div class="row g-0">
                             <div id="bodyCard1" class="card-body">
 
                                 <h5 id="titleCard1" class="card-title taskTitle"></h5>
-<<<<<<< HEAD
-
-                                <p id="remainingTime__Card1" class="remainingTime___Text taskText mb-0 text-left"></p>
-
-=======
->>>>>>> main
                                 <p id="descriptionCard1" class="card-text cardDescription taskText"></p>
 
                             </div>
                         </div>
-<<<<<<< HEAD
-=======
                         <div class="col-4 text-end pe-2 d-flex flex-column justify-content-evenly align-items-end">
                             
                             <span id="status__Card1" class="badge taskText taskStatus "></span>
@@ -38,7 +30,6 @@ let template = `<div class="row g-0">
                                 <p id="remainingTime__Card1" class="remainingTime___Text taskText p-0 m-0"></p>
                                 <p id="dueDate__Card1" class="dueDate__Text taskText p-0 m-0"></p>
                             </div>
->>>>>>> main
 
                         
                     
