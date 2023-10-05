@@ -8,28 +8,32 @@ class task {
         this.description = description;
         this.id = id;
         this.remainingDays = ComputeRemainingDays(dueDate);
+        this.type = "task";
     }
 }
 
-function GetAllKeys() {
+function GetAllTasksKeys() {
     let keys = [];
     for (let i = 0; i < localStorage.length; i++) {
-   
-        keys.push(localStorage.key(i));
+
+        let key = localStorage.key(i);
+        if (isParsableToTask(localStorage.getItem(key)))
+            keys.push(key);
 
     }
     return keys;
 
 }
 
+
 //take an optional array of ids
 function GetTasks(ids = null) {
 
     let tasks = [];
 
-    let keys = ids !== null ? ids : GetAllKeys();
+    let tasksKeys = ids !== null ? ids : GetAllTasksKeys();
 
-    for (let key of keys) {
+    for (let key of tasksKeys) {
 
         let item = GetTask(key);
         if (item !== null && item !== undefined) {
@@ -44,12 +48,17 @@ function GetTasks(ids = null) {
 function GetTask(id) {
 
 
-    let item = JSON.parse(localStorage.getItem(id));
+    let item = localStorage.getItem(id);
 
-    if (item !== null && item !== undefined)
-        item.dueDate = new Date(item.dueDate);
-
-    return item;
+    //retrieve item from storage only is task object
+    if (isJsonObject(item)) {
+        let parsedItem = JSON.parse(item);
+        if (isTaskObject(parsedItem)) {
+            parsedItem.dueDate = new Date(parsedItem.dueDate);
+            parsedItem = new task(parsedItem.title, parsedItem.status, parsedItem.dueDate, parsedItem.description, parsedItem.id);
+            return parsedItem;
+        }
+    }
 
 }
 
@@ -61,29 +70,58 @@ function StoreTask(task) {
 
 
 function CreateJSTask(title, status, dueDate, description) {
-    
-    let keys = GetAllKeys();    
+
+    let keys = GetAllTasksKeys();
 
     //Local storage does not store item in specific order -_> new id =  find the max current id and increment it
-    
-    let lastId = keys.length === 0 ? -1 : keys.reduce((a,b)=>{
-        return Math.max(a,b);
-    },0);
+
+    let lastId = keys.length === 0 ? -1 : keys.reduce((a, b) => {
+        return Math.max(a, b);
+    }, 0);
 
     return new task(title, status, dueDate, description, ++lastId);
 }
 
-function DeleteTask(id){
-    
+function DeleteTask(id) {
+
+    let task = GetTask(id);
+    if (task !== null && task !== undefined)
         localStorage.removeItem(id);
 }
 
-function DeleteTasks(ids){
-    
-    for (let id of ids){
+function DeleteTasks(ids) {
+
+    for (let id of ids) {
         DeleteTask(id);
     }
 }
 
+//PArse string to task
 
-export {GetTasks, GetTask, StoreTask, CreateJSTask,DeleteTask, DeleteTasks, task};
+
+function isTaskObject(parsedItem) {
+
+    return !(parsedItem === null || parsedItem === undefined || parsedItem.type !== "task");
+
+
+}
+
+function isJsonObject(strData) {
+    try {
+        JSON.parse(strData);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
+
+function isParsableToTask(item){
+
+    if(isJsonObject(item)){
+        if(isTaskObject(JSON.parse(item)))
+            return true;
+    }
+}
+
+
+export {GetTasks, GetTask, StoreTask, CreateJSTask, DeleteTask, DeleteTasks, task};
