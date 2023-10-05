@@ -9,6 +9,7 @@ group challenge to manage date, time and tasks plannification.
 - Deadline: 05/10/2023 - 17:00
 - Submission form: https://forms.gle/NmuFm422g2AW3e4N8
 - repo link : [Project-Planner](https://github.com/tomboszko/Project-Planner.git)
+- deployed project link : [Project-planner](https://tomboszko.github.io/Project-Planner/)
 
 ## Team: 
 

@@ -14,6 +14,7 @@ let template = `<div class="row g-0 mt-2">
                         <div class="col-8">
                             <div id="bodyCard1" class="card-body">
                                 <h5 id="titleCard1" class="card-title taskTitle"></h5>
+                                <p id="dueDate__Card1" class="dueDate__Text taskText p-0 m-0"></p>
                                 <p id="descriptionCard1" class="card-text cardDescription taskText"></p>
                             </div>
                         </div>
@@ -23,7 +24,7 @@ let template = `<div class="row g-0 mt-2">
                             
                             <div class="wrapper dueTime d-flex flex-column">
                                 <p id="remainingTime__Card1" class="remainingTime___Text taskText p-0 m-0"></p>
-                                <p id="dueDate__Card1" class="dueDate__Text taskText p-0 m-0"></p>
+                                
                             </div>
 
                             <button id="editBtn-Card1" type="button" class="btn editButton taskText align-self-end">Edit</button>

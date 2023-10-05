@@ -21,16 +21,15 @@
         flex-direction: column;
         padding: 15px;
         font-family: $cardFont;
+        font-weight: 600;
+        color:#688aad;
 
-        .editForm-buttonContainer
+        .addTask
         {
-            display: flex;
-            justify-content: space-between;
-
-            .addTask
-            {
-                width: fit-content;
-            }
+            width: 3rem;
+            margin-left: auto;
+            margin-right: auto;
+            
         }
     }
 }
