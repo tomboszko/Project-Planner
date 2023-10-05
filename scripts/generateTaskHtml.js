@@ -62,4 +62,4 @@ function DisplayAllTasks(){
     }
 }
 
-export{AddTaskToColumn, GetTasks, DisplayAllTasks}
+export{AddTaskToColumn, DisplayAllTasks}
