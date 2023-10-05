@@ -17,7 +17,6 @@ function clickEditButton(task, card)
     taskToEdit = GetTask(id);
     cardToEdit = card;
     generateForm(task);
-    console.log(tasks);
 }
 
 // called to generate the edit form
@@ -59,8 +58,6 @@ closeButton.addEventListener("click", closeForm);
 // called to validate the edit and make all the changes in card and array of tasks
 function editTask()
 {
-    console.log("edit task");
-
     let titleInput = document.getElementById("edit-titleInput");
     let dateInput = document.getElementById("editDueDate");
     let descriptionInput = document.getElementById("editDescription");

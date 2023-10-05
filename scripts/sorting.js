@@ -69,7 +69,6 @@ function sortTasks(arr, status)
         if (document.getElementById(arr[i].id) != null)
         {
             document.getElementById(status).append(document.getElementById(arr[i].id));
-            console.log(document.getElementById(arr[i].id));
         }
     }
 }

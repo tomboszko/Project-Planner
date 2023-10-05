@@ -6,9 +6,7 @@ const containers = document.querySelectorAll(".dropContainer");
 // called when start drag and drop
 function startDragTask(e)
 {
-    console.log("drag start");
     e.target.classList.add("dragging");
-    console.log(e.target);
 }
 
 // called when stop drag and drop = check parent collumn and change status
