@@ -1,0 +1,16 @@
+﻿@mixin taskTitle {
+  @include font-size(1rem);
+
+  font-family:$cardFont;
+font-weight:500;  
+  color:black;
+}
+
+@mixin taskText {
+  @include font-size(0.8rem);
+
+  font-family:$cardFont;
+  font-weight:400;
+  color: #666666;
+
+}

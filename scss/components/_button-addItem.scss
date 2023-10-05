@@ -1,0 +1,16 @@
+.addCard
+{
+    background-color: $barbielightblue;
+    color:$barbieblue;
+    padding: 0px 5px 2px 5px;
+    border: solid #92c7ff73 0.5px;
+    font-weight: 500;
+    border-radius: 50px;
+}
+
+.addCard:hover
+{
+    background-color: $barbielightblue;
+    color: #688aad;
+    border: none;
+}

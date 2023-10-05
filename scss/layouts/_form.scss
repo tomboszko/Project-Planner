@@ -1,0 +1,30 @@
+#cardInput
+{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .formContainer
+    {
+        background-color: #c5e0fbfa;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        font-family: $cardFont;
+
+        .addTask
+        {
+            width: fit-content;
+        }
+    }
+}

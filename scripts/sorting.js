@@ -1,5 +1,6 @@
+import {task, tasks} from "./task.js";
+
 let sortingInput = document.getElementById("sortSelect");
-sortingInput.addEventListener("change", changeSorting);
 
 // compare titles for tasks sorting by name
 function compareName( a, b ) 
@@ -33,8 +34,8 @@ function changeSorting()
     let arr3 = [];
 
     tasks.forEach(element => {
-        if (element.status == "toDo") arr1.push(element);
-        if (element.status == "inProgress") arr2.push(element);
+        if (element.status == "todo") arr1.push(element);
+        if (element.status == "inprogress") arr2.push(element);
         if (element.status == "done") arr3.push(element);
     });
 
@@ -43,19 +44,15 @@ function changeSorting()
             break;
 
         case "1":
-            console.log("date");
             arr1.sort(compareDays);
             arr2.sort(compareDays);
             arr3.sort(compareDays);
-            console.log(arr1);
             break;
 
         case "2":
-            console.log("name");
             arr1.sort(compareName);
             arr2.sort(compareName);
             arr3.sort(compareName);
-            console.log(arr1);
             break;
     }
 
@@ -69,13 +66,11 @@ function sortTasks(arr, status)
 {
     for (let i = 0; i < arr.length; i++) 
     {
-        if (i == arr.length - 1)
+        if (document.getElementById(arr[i].id) != null)
         {
             document.getElementById(status).append(document.getElementById(arr[i].id));
         }
-        else
-        {
-            document.getElementById(status).prepend(document.getElementById(arr[i].id), document.getElementById(arr[i + 1].id));
-        }
     }
 }
+
+export {changeSorting};
