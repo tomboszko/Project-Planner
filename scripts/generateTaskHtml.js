@@ -1,4 +1,6 @@
-﻿function GenerateTaskHtml(task){
+﻿import {clickEditButton} from "./editCard.js";
+
+function GenerateTaskHtml(task){
     let taskCard = document.createElement("div");
     taskCard.classList.add("card","task","m-2","p-2");
     taskCard.setAttribute("id",task.id);
@@ -45,6 +47,7 @@ function AddTaskToColumn(task){
     
     let col = document.querySelector(`.column[status=${CSS.escape(task.status)}]`);
     let taskElement = GenerateTaskHtml(task);
+    taskElement.querySelector(".editButton").addEventListener("click", function(){ clickEditButton(task, taskElement) });
     
     if(col !== null && col !== undefined){        
         col.appendChild(taskElement);
