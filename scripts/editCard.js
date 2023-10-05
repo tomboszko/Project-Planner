@@ -17,7 +17,6 @@ function clickEditButton(task, card)
     taskToEdit = GetTask(id);
     cardToEdit = card;
     generateForm(task);
-    console.log(tasks);
 }
 
 // called to generate the edit form
@@ -50,15 +49,15 @@ function displayRadioValue(status)
 
 let validateButton = document.getElementById("editTask");
 let deleteButton = document.getElementById("deleteTask");
+let closeButton = document.getElementById("closeEditForm");
 
 validateButton.addEventListener("click", editTask)
 deleteButton.addEventListener("click", deleteTask);
+closeButton.addEventListener("click", closeForm);
 
 // called to validate the edit and make all the changes in card and array of tasks
 function editTask()
 {
-    console.log("edit task");
-
     let titleInput = document.getElementById("edit-titleInput");
     let dateInput = document.getElementById("editDueDate");
     let descriptionInput = document.getElementById("editDescription");
@@ -108,6 +107,19 @@ function deleteTask()
     DeleteTask(id)
     cardToEdit.remove();
 
+    form.classList.toggle("d-none");
+}
+
+// called to close the edit form
+function closeForm()
+{
+    let titleInput = document.getElementById("edit-titleInput");
+    let dateInput = document.getElementById("editDueDate");
+    let descriptionInput = document.getElementById("editDescription");
+    titleInput.value = '';
+    dateInput.value = '';
+    descriptionInput.value = '';
+    
     form.classList.toggle("d-none");
 }
 

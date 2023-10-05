@@ -43,16 +43,15 @@
 
 
         <div class="row m-auto">
-            <div id="toDoCol" status="todo" class="col-md column">
+            <div id="toDoCol" status="todo" class="col-md column dropContainer">
                 To do
                        <button type="button" id="addToDo" class="btn addCard btn-light">Add Task</button>
-            </div>         
-
-            <div id="inProgressCol" status="inprogress"  class="col-md column">
+            </div> 
+            <div id="inProgressCol" status="inprogress"  class="col-md column dropContainer">
                 In Progress
                 <button type="button" id="addInProgress" class="btn addCard btn-light">Add Task</button>
             </div>
-            <div id="doneProgress" status="done"  class="col-md column">
+            <div id="doneProgress" status="done"  class="col-md column dropContainer">
                 Done
                 <button type="button" id="addDone" class="btn addCard btn-light">Add task</button>
             </div>
@@ -62,6 +61,8 @@
     <form id="cardInput" class="d-none form">
 
         <div class="formContainer">
+
+            <button type="button" id="closeAddForm" class="closeButton btn-secondary">X</button>
 
             <div class="mb-3">
                 <label for="card-titleInput" class="form-label">Task</label>
@@ -102,6 +103,8 @@
 
         <div class="formContainer">
 
+            <button type="button" id="closeEditForm" class="closeButton btn-secondary">X</button>
+
             <div class="mb-3">
                 <label for="edit-titleInput" class="form-label">Task</label>
                 <input type="text" class="form-control" id="edit-titleInput" placeholder="task title">
@@ -138,8 +141,7 @@
     
     </form>
 
-    </div>
-
+    
     
     </main>
 </div>

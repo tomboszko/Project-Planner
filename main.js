@@ -1,7 +1,7 @@
 import {RefreshRemainingDays} from "./scripts/remainingDays.js";
 import {GetTasks, GetTask, DeleteTask} from "./scripts/task.js";
 import {DisplayAllTasks} from "./scripts/generateTaskHtml.js";
-import {AddTask,preselectStatus} from "./scripts/cardcreation.js";
+import {AddTask,preselectStatus,ClearInputForm} from "./scripts/cardcreation.js";
 import {changeSorting} from "./scripts/sorting.js";
 import {changeFiltering} from "./scripts/filtering.js";
 
@@ -37,6 +37,9 @@ addItemDone.addEventListener('click', function () {
 let submit = document.getElementById('addTask');
 submit.addEventListener('click', AddTask);
 
+let closeForm = document.getElementById("closeAddForm");
+closeForm.addEventListener("click", ClearInputForm);
+
 
 
 // tasks.push(
@@ -45,8 +48,8 @@ submit.addEventListener('click', AddTask);
 //     // new task("title3","done",new Date(2024,1,25),"blablabla",3),
 //     // new task("title4","todo",new Date(2023,11,24),"blablabla",4),
 //     )
-//
-//
+
+
 //     //Code For Test
 //  for(let c of tasks){
 //      AddTaskToColumn(c);
