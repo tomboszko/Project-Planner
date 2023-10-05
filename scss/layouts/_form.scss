@@ -43,5 +43,12 @@
                 width: fit-content;
             }
         }
+
+        .closeButton
+        {
+            width: fit-content;
+            align-self: flex-end;
+            position: absolute;
+        }
     }
 }
