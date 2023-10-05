@@ -10,6 +10,22 @@ class task {
         this.remainingDays = ComputeRemainingDays(dueDate);
     }
 }
-let tasks = [];
 
-export {tasks, task};
+function GetTasks(){
+    
+    let tasks = [];
+
+    for(let i = 0 ;i<localStorage.length;i++){
+
+        let key = localStorage.key(i);
+        let item = JSON.parse(localStorage.getItem(key));
+        item.dueDate = new Date(item.dueDate);
+        tasks.push(item);
+
+    }
+    
+    return tasks;
+
+}
+
+export {GetTasks, task};

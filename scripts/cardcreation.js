@@ -1,7 +1,5 @@
-import {tasks, task} from "./task.js";
+import {task} from "./task.js";
 import {AddTaskToColumn} from "./generateTaskHtml.js";
-
-let id = 0;
 
 
 let titleInput = document.getElementById('card-titleInput');
@@ -21,19 +19,19 @@ function AddTask() {
 
 function CreateJSTask() {
 
-
     let title = titleInput.value;
     let dueDate = new Date(dueDateInput.value);
     let description = descriptionInput.value;
-    let status = displayRadioValue();
+    let status = displayRadioValue().trim().split(" ").join("").toLowerCase();
+    let lastId = localStorage.length === 0 ? -1 : localStorage.length-1;
 
-    let newTask = new task(title, status, dueDate, description, id);
-    id++;
-    return newTask
+    //id++;
+    return new task(title, status, dueDate, description, ++lastId);
 }
 
 function StoreTask(task){
-    tasks.push(task);
+   // tasks.push(task);
+    localStorage.setItem(task.id,JSON.stringify(task));
 }
 
 
@@ -68,5 +66,8 @@ function preselectStatus(StatusId) {
     form.classList.toggle("d-none");
 
 }
+
+
+
 
 export {preselectStatus,AddTask}

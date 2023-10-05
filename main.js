@@ -1,11 +1,13 @@
 import {RefreshRemainingDays} from "./scripts/remainingDays.js";
 // import {tasks,task} from "./scripts/task.js";
-// import{AddTaskToColumn} from "./scripts/generateTaskHtml.js";
+import{DisplayAllTasks} from "./scripts/generateTaskHtml.js";
 import {AddTask,preselectStatus} from "./scripts/cardcreation.js";
 import {changeSorting} from "./scripts/sorting.js";
 import {changeFiltering} from "./scripts/filtering.js";
 
+DisplayAllTasks();
 RefreshRemainingDays();
+
 
 let sortingInput = document.getElementById("sortSelect");
 sortingInput.addEventListener("change", changeSorting);
