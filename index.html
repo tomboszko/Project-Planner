@@ -66,7 +66,7 @@
 
             <div class="mb-3">
                 <label for="card-titleInput" class="form-label">Task</label>
-                <input type="text" class="form-control" id="card-titleInput" placeholder="task title">
+                <input type="text" class="form-control" id="card-titleInput" placeholder="task title" required>
               </div>
         
               <div class="mb-3">
@@ -83,7 +83,7 @@
         
               <div class="mb-3">
                 <label for="dueDate__Card1Input" class="form-label">Due date</label>
-                <input type="date" class="form-control" id="dueDate__Card1Input" placeholder="dd/mm/yyyy">
+                <input type="date" class="form-control" id="dueDate__Card1Input" placeholder="dd/mm/yyyy" required>
               </div>
         
               <div class="mb-3">
@@ -91,7 +91,7 @@
                 <textarea class="form-control" id="descriptionCard1Input" rows="3"></textarea>
               </div>
         
-              <button type="button" id="addTask" class="addTask btn-secondary">Add</button>
+              <input type="submit" value="Add" id="addTask" class="addTask btn-secondary">
 
         </div>
     
@@ -107,7 +107,7 @@
 
             <div class="mb-3">
                 <label for="edit-titleInput" class="form-label">Task</label>
-                <input type="text" class="form-control" id="edit-titleInput" placeholder="task title">
+                <input type="text" class="form-control" id="edit-titleInput" placeholder="task title" required>
               </div>
         
               <div class="mb-3">
@@ -124,7 +124,7 @@
         
               <div class="mb-3">
                 <label for="editDueDate" class="form-label">Due date</label>
-                <input type="date" class="form-control" id="editDueDate" placeholder="dd/mm/yyyy">
+                <input type="date" class="form-control" id="editDueDate" placeholder="dd/mm/yyyy" required>
               </div>
         
               <div class="mb-3">
@@ -133,7 +133,7 @@
               </div>
         
               <div class="editForm-buttonContainer">
-                <button type="button" id="editTask" class="addTask btn-secondary">Edit</button>
+                <input type="submit" value="Edit" id="editTask" class="addTask btn-secondary">
                 <button type="button" id="deleteTask" class="addTask btn-secondary">Delete</button>
               </div>
 

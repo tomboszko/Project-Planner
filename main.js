@@ -34,8 +34,8 @@ addItemDone.addEventListener('click', function () {
 
 });
 
-let submit = document.getElementById('addTask');
-submit.addEventListener('click', AddTask);
+let submit = document.getElementById('cardInput');
+submit.addEventListener('submit', AddTask);
 
 let closeForm = document.getElementById("closeAddForm");
 closeForm.addEventListener("click", ClearInputForm);

@@ -7,8 +7,9 @@ let dueDateInput = document.getElementById('dueDate__Card1Input');
 let descriptionInput = document.getElementById('descriptionCard1Input');
 
 
-function AddTask() {
+function AddTask(event) {
 
+    event.preventDefault();
     let newTask = CreateTask();
     StoreTask(newTask);
     AddTaskToColumn(newTask);
