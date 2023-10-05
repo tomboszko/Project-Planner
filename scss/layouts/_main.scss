@@ -12,10 +12,15 @@ margin: {
     bottom: 1rem;
 }
 padding-bottom: 1rem;
+padding-top: 1px;
 border-radius: 1em;
 
 font-size: 1rem;
 font-weight: 600;
+color:#688aad;
 
+}
 
+#text {
+    z-index: 10;
 }

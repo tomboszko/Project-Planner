@@ -24,16 +24,21 @@
 .badge {
   color: white;
   background-color: rgb(201, 182, 215);
+  width: -moz-fit-content;
   width: fit-content;
 }
 
 .addCard {
   background-color: rgba(197, 224, 251, 0.4);
-  color: #92c7ff;
+  color: rgb(148, 200, 255);
   padding: 0px 5px 2px 5px;
   border: solid rgba(146, 199, 255, 0.4509803922) 0.5px;
   font-weight: 500;
   border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .addCard:hover {
@@ -74,11 +79,12 @@
 
 .form-select {
   background-color: rgba(197, 224, 251, 0.4);
-  color: #92c7ff;
+  color: rgb(148, 200, 255);
   padding: 0 5px 2px 5px;
   border: solid rgba(146, 199, 255, 0.4509803922) 0.5px;
   font-weight: 500;
   border-radius: 50px;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -90,7 +96,8 @@
 
 header {
   background-color: #C9B6D7;
-  color: white;
+  color: #688aad;
+  font-family: "Source Code Pro", sans-serif;
   display: flex;
   align-items: start;
   flex-direction: column;
@@ -109,17 +116,25 @@ main {
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
+  padding-top: 1px;
   border-radius: 1em;
   font-size: 1rem;
   font-weight: 600;
+  color: #688aad;
+}
+
+#text {
+  z-index: 10;
 }
 
 footer {
-  background-color: #C9B6D7;
   height: 3rem;
-  color: antiquewhite;
   text-align: center;
-  position: static;
+  position: sticky;
+  background-color: #C9B6D7;
+  color: #688aad;
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 0.7rem;
 }
 
 #cardInput {
@@ -129,14 +144,17 @@ footer {
   left: 0;
   width: 100vw;
   height: 100vh;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #cardInput .formContainer {
   background-color: rgba(197, 224, 251, 0.9803921569);
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   border-radius: 10px;
   display: flex;
@@ -145,6 +163,7 @@ footer {
   font-family: "Source Code Pro", sans-serif;
 }
 #cardInput .formContainer .addTask {
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -158,9 +177,13 @@ main {
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
+  padding-top: 1px;
   border-radius: 1em;
   font-size: 1rem;
   font-weight: 600;
+  color: #688aad;
 }
 
-/*# sourceMappingURL=style.css.map */
+#text {
+  z-index: 10;
+}/*# sourceMappingURL=style.css.map */

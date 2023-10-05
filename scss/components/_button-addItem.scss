@@ -6,6 +6,13 @@
     border: solid #92c7ff73 0.5px;
     font-weight: 500;
     border-radius: 50px;
+
+    display: flex;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    
 }
 
 .addCard:hover
