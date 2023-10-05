@@ -21,20 +21,52 @@
   background-color: white;
 }
 
+.card-title {
+  margin-bottom: 0;
+}
+
+.dueDate__Text {
+  font-size: 0.5rem;
+}
+
+.row {
+  padding-top: 0;
+}
+
+.card {
+  padding-top: 0;
+}
+
 .badge {
   color: white;
-  background-color: rgb(201, 182, 215);
+  background-color: rgb(148, 200, 255);
   width: -moz-fit-content;
   width: fit-content;
 }
 
+.card-body {
+  padding-top: 0;
+  padding-left: 0;
+}
+
+.card-text {
+  text-align: start;
+}
+
+.row.g-0.mt-2 {
+  margin-top: 0rem;
+}
+
 .addCard {
   background-color: rgba(197, 224, 251, 0.4);
-  color: #92c7ff;
+  color: rgb(148, 200, 255);
   padding: 0px 5px 2px 5px;
   border: solid rgba(146, 199, 255, 0.4509803922) 0.5px;
   font-weight: 500;
   border-radius: 50px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .addCard:hover {
@@ -75,7 +107,7 @@
 
 .form-select {
   background-color: rgba(197, 224, 251, 0.4);
-  color: #92c7ff;
+  color: rgb(148, 200, 255);
   padding: 0 5px 2px 5px;
   border: solid rgba(146, 199, 255, 0.4509803922) 0.5px;
   font-weight: 500;
@@ -92,36 +124,57 @@
 
 header {
   background-color: #C9B6D7;
-  color: white;
+  color: #688aad;
+  font-family: "Source Code Pro", sans-serif;
   display: flex;
   align-items: start;
   flex-direction: column;
   margin-right: auto;
   margin-left: auto;
   padding-left: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 
 main {
   background-color: rgba(197, 224, 251, 0.4);
+  margin-bottom: 3rem;
+  border-radius: 1rem;
 }
 
 .column {
   background-color: rgba(246, 202, 221, 0.7);
+  justify-content: center;
   margin-right: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-top: 1px;
   border-radius: 1em;
   font-size: 1rem;
   font-weight: 600;
+  color: #688aad;
 }
 
 footer {
-  background-color: #C9B6D7;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   height: 3rem;
-  color: antiquewhite;
   text-align: center;
-  position: static;
+  background-color: #C9B6D7;
+  color: #688aad;
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 0.7rem;
+  padding-top: 1rem;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container center {
+  position: relative;
+  min-height: 100vh;
+  margin-bottom: 3rem;
 }
 
 .form {
@@ -148,27 +201,38 @@ footer {
   flex-direction: column;
   padding: 15px;
   font-family: "Source Code Pro", sans-serif;
+  font-weight: 600;
+  color: #688aad;
 }
 .form .formContainer .editForm-buttonContainer {
   display: flex;
   justify-content: space-between;
 }
 .form .formContainer .editForm-buttonContainer .addTask {
+  width: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form .formContainer .editForm-buttonContainer #editTask, .form .formContainer .editForm-buttonContainer #deleteTask {
   width: -moz-fit-content;
   width: fit-content;
 }
 
 main {
   background-color: rgba(197, 224, 251, 0.4);
+  margin-bottom: 3rem;
+  border-radius: 1rem;
 }
 
 .column {
   background-color: rgba(246, 202, 221, 0.7);
+  justify-content: center;
   margin-right: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-top: 1px;
   border-radius: 1em;
   font-size: 1rem;
   font-weight: 600;
+  color: #688aad;
 }/*# sourceMappingURL=style.css.map */
