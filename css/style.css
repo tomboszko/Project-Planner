@@ -23,9 +23,22 @@
 
 .badge {
   color: white;
-  background-color: rgb(201, 182, 215);
+  background-color: rgb(148, 200, 255);
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.card-body {
+  padding-top: 0;
+  padding-left: 0;
+}
+
+.card-text {
+  text-align: start;
+}
+
+.row.g-0.mt-2 {
+  margin-top: 0rem;
 }
 
 .addCard {
@@ -133,9 +146,6 @@ footer {
   color: #688aad;
   font-family: "Source Code Pro", sans-serif;
   font-size: 0.7rem;
-}
-
-p {
   padding-top: 1rem;
   text-align: center;
 }
