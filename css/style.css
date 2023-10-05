@@ -124,7 +124,7 @@ footer {
   position: static;
 }
 
-#cardInput {
+.form {
   position: fixed;
   z-index: 1;
   top: 0;
@@ -137,7 +137,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
-#cardInput .formContainer {
+.form .formContainer {
   background-color: rgba(197, 224, 251, 0.9803921569);
   width: -moz-fit-content;
   width: fit-content;
@@ -149,7 +149,11 @@ footer {
   padding: 15px;
   font-family: "Source Code Pro", sans-serif;
 }
-#cardInput .formContainer .addTask {
+.form .formContainer .editForm-buttonContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.form .formContainer .editForm-buttonContainer .addTask {
   width: -moz-fit-content;
   width: fit-content;
 }

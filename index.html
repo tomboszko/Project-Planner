@@ -55,7 +55,7 @@
         </div>
  
 
-    <form id="cardInput" class="d-none">
+    <form id="cardInput" class="d-none form">
 
         <div class="formContainer">
 
@@ -86,11 +86,56 @@
                 <textarea class="form-control" id="descriptionCard1Input" rows="3"></textarea>
               </div>
         
-              <button type="button" id="addTask" class="addTask btn-secondary">Add Task</button>
+              <div class="editForm-buttonContainer">
+                <button type="button" id="addTask" class="addTask btn-secondary">Add Task</button>
+              </div>
 
         </div>
     
     </form>
+
+    <!-- form for edit task -->
+
+    <form id="cardEdit" class="d-none form">
+
+        <div class="formContainer">
+
+            <div class="mb-3">
+                <label for="edit-titleInput" class="form-label">Task Title</label>
+                <input type="text" class="form-control" id="edit-titleInput" placeholder="task title">
+              </div>
+        
+              <div class="mb-3">
+                <label for="editStatus__Card1Input" class="form-label">Status</label>
+                <div id="editStatus__Card1Input">
+                  <input type="radio" id="EditInputToDo" name="editStatus" value="todo" />
+                  <label for="EditInputToDo">To do</label>
+                  <input type="radio" id="EditInputInProgress" name="editStatus" value="inprogress" />
+                  <label for="EditInputInProgress">In progress</label>
+                  <input type="radio" id="EditInputDone" name="editStatus" value="done" />
+                  <label for="EditInputDone">Done</label>
+                  </div>
+              </div>
+        
+              <div class="mb-3">
+                <label for="editDueDate" class="form-label">Due date</label>
+                <input type="date" class="form-control" id="editDueDate" placeholder="dd/mm/yyyy">
+              </div>
+        
+              <div class="mb-3">
+                <label for="editDescription" class="form-label">Description</label>
+                <textarea class="form-control" id="editDescription" rows="3"></textarea>
+              </div>
+        
+              <div class="editForm-buttonContainer">
+                <button type="button" id="editTask" class="addTask btn-secondary">Edit Task</button>
+                <button type="button" id="deleteTask" class="addTask btn-secondary">Delete Task</button>
+              </div>
+
+        </div>
+    
+    </form>
+
     </div>
 </main>
 <footer>

@@ -1,4 +1,4 @@
-#cardInput
+.form
 {
     position: fixed;
     z-index: 1;
@@ -22,9 +22,15 @@
         padding: 15px;
         font-family: $cardFont;
 
-        .addTask
+        .editForm-buttonContainer
         {
-            width: fit-content;
+            display: flex;
+            justify-content: space-between;
+
+            .addTask
+            {
+                width: fit-content;
+            }
         }
     }
 }
