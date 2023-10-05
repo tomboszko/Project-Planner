@@ -2,9 +2,10 @@
 
 function GenerateTaskHtml(task){
     let taskCard = document.createElement("div");
-    taskCard.classList.add("card","task","m-2","p-2");
+    taskCard.classList.add("card","task","m-2","p-2", "draggable");
     taskCard.setAttribute("id",task.id);
     taskCard.setAttribute("style","max-width: 50rem;");
+    taskCard.setAttribute("draggable", "true");
     taskCard.innerHTML = template;
     FulFillTaskHtml(taskCard,task);
     return taskCard;
