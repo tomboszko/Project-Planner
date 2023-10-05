@@ -136,6 +136,10 @@ footer {
   font-size: 0.7rem;
 }
 
+p {
+  padding-top: 1rem;
+}
+
 #cardInput {
   position: fixed;
   z-index: 1;
