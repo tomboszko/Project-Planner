@@ -21,6 +21,22 @@
   background-color: white;
 }
 
+.card-title {
+  margin-bottom: 0;
+}
+
+.dueDate__Text {
+  font-size: 0.5rem;
+}
+
+.row {
+  padding-top: 0;
+}
+
+.card {
+  padding-top: 0;
+}
+
 .badge {
   color: white;
   background-color: rgb(148, 200, 255);
@@ -126,9 +142,9 @@ main {
 .column {
   background-color: rgba(246, 202, 221, 0.7);
   margin-right: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
   padding-top: 1px;
   border-radius: 1em;
   font-size: 1rem;
@@ -199,9 +215,9 @@ main {
 .column {
   background-color: rgba(246, 202, 221, 0.7);
   margin-right: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
   padding-top: 1px;
   border-radius: 1em;
   font-size: 1rem;
